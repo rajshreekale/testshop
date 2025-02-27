@@ -1,0 +1,158 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_pQrUga": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "custom_liquid_Bj8yxR": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <svg width=\"30px\" height=\"30px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                      <rect x=\"0\" fill=\"none\" width=\"24\" height=\"24\"/>\n\n                      <g>\n\n                      <path d=\"M16.5 4.5c2.206 0 4 1.794 4 4 0 4.67-5.543 8.94-8.5 11.023C9.043 17.44 3.5 13.17 3.5 8.5c0-2.206 1.794-4 4-4 1.298 0 2.522.638 3.273 1.706L12 7.953l1.227-1.746c.75-1.07 1.975-1.707 3.273-1.707m0-1.5c-1.862 0-3.505.928-4.5 2.344C11.005 3.928 9.362 3 7.5 3 4.462 3 2 5.462 2 8.5c0 5.72 6.5 10.438 10 12.85 3.5-2.412 10-7.13 10-12.85C22 5.462 19.538 3 16.5 3z\"/>\n\n                      </g>\n                    </svg>\n                  </button>\n                {% endif %}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "custom_liquid_CHaLjy": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<!-- Extentia comment Start Author: Shrikant -->\n                  <div>\n                    {% if customer %}\n                          <!-- User is logged in, show the button -->\n                          <button id=\"openPopup\" class=\"logged-in-button shopify-payment-button__button--unbranded\">Get Reward Point</button>\n                          \n                    {% else %}\n                        <!-- User is not logged in, you can either show a different button or nothing -->\n                          <a href=\"{{ shop.url }}/account/login\"><button type=\"button\" class=\"logged-in-button shopify-payment-button__button--unbranded\">Login To Refer A Friend</button></a>\n                    {% endif %}\n  <div id=\"responseText\"></div>\n                    <div id=\"popup\" class=\"popup\">\n                      <div class=\"popup-content\">\n                        <span id=\"closePopup\" class=\"close\">&times;</span>\n                        <h2>Enter your email</h2>\n                        <p>Refer a friend and earn a reward when they make a purchase through your shared link!</p>\n                        \n                        <!-- Email Input and Submit Button -->\n                        <input type=\"email\" id=\"emailInput\" placeholder=\"Enter your email\" required />\n                        <button id=\"submitEmail\" class=\"submit-button\">Send</button>\n                        \n                        <p id=\"responseMessage\" style=\"color: green;\"></p> <!-- For success/error message -->\n                      </div>\n                    </div>\n                  </div>\n                  <!-- Extentia comment Ends -->\n\n<!-- Extentia comment Start Author: Shrikant -->\n  {%- if template == 'product' -%}\n    <script src=\"{{ 'product-page.js' | asset_url }}\" defer></script>\n    <script src=\"{{ 'refer-friend.js' | asset_url }}\" defer></script>\n  {% endif %}\n  <!-- Extentia comment Ends -->"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "judge_me_reviews_preview_badge_pQrUga",
+        "custom_liquid_Bj8yxR",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_CHaLjy",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "background-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "1711032538524d5d04": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_73iYRa": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_73iYRa"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "17110324969798e207": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_with_countdown_dttLpF": {
+      "type": "image-with-countdown",
+      "settings": {
+        "image": "shopify://shop_images/black-bag-over-the-shoulder_925x_86692645-7662-411b-a250-57b7bd68f461.jpg",
+        "end_date": "2025-03-25"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1711032538524d5d04",
+    "related-products",
+    "17110324969798e207",
+    "image_with_countdown_dttLpF"
+  ]
+}

@@ -1,0 +1,172 @@
+{% schema %}
+{
+  "name": "Countdown Timer",
+  "settings": [
+    {
+      "type": "select",
+      "id": "countdown_type",
+      "label": "Countdown Type",
+      "options": [
+        { "value": "before_sale", "label": "Before Sale Starts" },
+        { "value": "during_sale", "label": "Ongoing Sale Countdown" },
+        { "value": "sale_till", "label": "Sale Till Date" }
+      ],
+      "default": "during_sale"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "start_date",
+      "label": "Sale Start Date (YYYY-MM-DD)",
+      "default": "2025-06-01"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "Sale End Date (YYYY-MM-DD)",
+      "default": "2025-06-30"
+    },
+    {
+      "type": "text",
+      "id": "custom_text",
+      "label": "Custom Message",
+      "default": "Hurry up! Don't miss the sale!"
+    },
+    {
+      "type": "url",
+      "id": "sale_page",
+      "label": "Sale Page Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown Timer"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="countdown-container" style="background-image: url('{{ section.settings.image | image_url }}');">
+  <div class="countdown-overlay">
+    {% if section.settings.countdown_type == "before_sale" %}
+      <p>{{ section.settings.custom_text }}</p>
+      <p>Sale Starts on: {{ section.settings.start_date }}</p>
+    {% elsif section.settings.countdown_type == "during_sale" %}
+      <p>{{ section.settings.custom_text }}</p>
+      <p>Sale Period: {{ section.settings.start_date }} - {{ section.settings.end_date }}</p>
+     
+    {% elsif section.settings.countdown_type == "sale_till" %}
+      <p>{{ section.settings.custom_text }}</p>
+      <p>Sale Ends on: {{ section.settings.end_date }}</p>
+    {% endif %}
+    
+    <div id="countdown" class="countdown-timer"
+         data-start-date="{{ section.settings.start_date }}"
+         data-end-date="{{ section.settings.end_date }}"
+         data-type="{{ section.settings.countdown_type }}"></div>
+     <a href="{{ section.settings.sale_page }}" class="countdown-btn">Shop Now</a>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var countdownElement = document.getElementById("countdown");
+    var countdownType = countdownElement.getAttribute("data-type");
+    var startDate = countdownElement.getAttribute("data-start-date");
+    var endDate = countdownElement.getAttribute("data-end-date");
+
+    function updateCountdown() {
+        var now = new Date().getTime();
+        var countdownText = "";
+
+        if (countdownType === "before_sale") {
+            var startTime = new Date(startDate + " 00:00:00").getTime();
+            if (now < startTime) {
+                var distance = startTime - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                countdownText = `Sale starts in ${days} days!`;
+            } else {
+                countdownText = "Sale has started!";
+            }
+        } 
+        else if (countdownType === "during_sale") {
+            var startTime = new Date(startDate + " 00:00:00").getTime();
+            var endTime = new Date(endDate + " 23:59:59").getTime();
+            
+            if (now < startTime) {
+                countdownText = "Sale coming soon!";
+            } else if (now >= startTime && now <= endTime) {
+                var distance = endTime - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                countdownText = `Sale ends in ${days} days!`;
+            } else {
+                countdownText = "Sale has ended!!";
+            }
+        } 
+        else if (countdownType === "sale_till") {
+            var endTime = new Date(endDate + " 23:59:59").getTime();
+            if (now <= endTime) {
+                var distance = endTime - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                countdownText = `Only ${days} days left!`;
+            } else {
+                countdownText = "Sale has ended";
+            }
+        }
+
+        countdownElement.innerHTML = countdownText;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+});
+</script>
+
+<style>
+.countdown-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.countdown-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.countdown-timer {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.countdown-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.countdown-btn:hover {
+  background-color: #e68900;
+}
+</style>

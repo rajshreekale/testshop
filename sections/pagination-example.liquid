@@ -1,0 +1,25 @@
+{% schema %}
+{
+  "name": "Pagination Example",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "Pagination Example"
+    }
+  ]
+}
+{% endschema %}
+
+{% paginate collections by 5 %}
+  {% for item in collections %}
+    <div>{{ item.title }}</div>
+  {% endfor %}
+
+  {% if paginate.pages > 1 %}
+    {% render 'pagination', paginate:paginate %}
+  {% endif %}
+  
+{% endpaginate %}
+
+

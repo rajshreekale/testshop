@@ -1,0 +1,83 @@
+{% schema %}
+{
+  "name": "Image with Countdown",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "Sale End Date (YYYY-MM-DD)",
+      "default": "2025-02-20"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Countdown"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="countdown-container" style="background-image: url('{{ section.settings.image | image_url }}');">
+  <div class="countdown-overlay">
+    <div id="countdown" class="countdown-timer" data-end-date="{{ section.settings.end_date }}"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var countdownElement = document.getElementById("countdown");
+    var saleEndDate = countdownElement.getAttribute("data-end-date");
+
+    var saleEndTime = new Date(saleEndDate + " 23:59:59").getTime();
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = saleEndTime - now;
+
+        if (distance < 0) {
+            clearInterval(x);
+            countdownElement.innerHTML = "Sale Ended!";
+            return;
+        }
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }, 1000);
+});
+</script>
+
+<style>
+.countdown-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.countdown-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.countdown-timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+</style>

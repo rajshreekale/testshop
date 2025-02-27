@@ -1,0 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_9piYMX": {
+          "type": "text",
+          "settings": {
+            "heading": "About Us",
+            "subtext": "<p>Minimal E-Commerce is a dynamic and innovative online retail platform that offers a wide range of products to customers worldwide.</p>"
+          }
+        },
+        "text_7JkfEj": {
+          "type": "text",
+          "settings": {
+            "heading": "Quick Link",
+            "subtext": "<p>My Account<br/>My Cart<br/>Wishlist<br/>Gift Card<br/>Need Help?</p>"
+          }
+        },
+        "text_6kcEGT": {
+          "type": "text",
+          "settings": {
+            "heading": "Information",
+            "subtext": "<p>About us<br/>Contact<br/>Blogs<br/>Size Chart<br/>FAQ</p>"
+          }
+        },
+        "text_djqU9D": {
+          "type": "text",
+          "settings": {
+            "heading": "Other links",
+            "subtext": "<p>Privacy Policy<br/>Refund Policy<br/>Shipping Policy<br/>Terms of Service</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_9piYMX",
+        "text_7JkfEj",
+        "text_6kcEGT",
+        "text_djqU9D"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
