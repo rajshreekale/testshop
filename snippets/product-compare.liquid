@@ -1,0 +1,44 @@
+<div class="compare-section">
+    <h1>Related items</h1>
+    <div class="compare-container">
+      <!-- Current Product -->
+      <!-- Recommended Products -->
+      <div class="recommendations">
+        <div class="compare-list">
+            <div>
+                <div class="compare-item main-product">
+                    <a href="{{ product.url }}">
+                        <img height=""; width=""; src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+                    </a>
+                    <p>{{ product.title }}</p>
+                    <p class="price">₹{{ product.price | money }}</p>
+                    <form method="post" action="/cart/add">
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    <button type="submit" class="compare-btn">Add to cart</button>
+                    </form>
+                </div> 
+            </div>
+          {% assign collection_handle = product.collections.first.handle %}
+          {% assign collection = collections[collection_handle] %}
+          
+          {% for compared_product in collection.products limit: 3 %}
+            {% if compared_product.id != product.id %}
+              <div class="compare-item">
+                <a href="{{ compared_product.url }}">
+                    <img height=""; width=""; src="{{ compared_product.featured_image | img_url: 'medium' }}" alt="{{ compared_product.title }}">
+                  </a>
+                <p>{{ compared_product.title }}</p>
+                <p class="price">₹{{ compared_product.price | money }}</p>
+               <!-- Add to Cart Form -->
+               <form method="post" action="/cart/add">
+                <input type="hidden" name="id" value="{{ compared_product.variants.first.id }}">
+                <button type="submit" class="compare-btn">Add to cart</button>
+               </form>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  

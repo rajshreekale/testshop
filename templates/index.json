@@ -362,10 +362,10 @@
     "countdown_timer_sale_98bRVf": {
       "type": "countdown-timer-sale",
       "settings": {
-        "countdown_type": "during_sale",
+        "countdown_type": "sale_till",
         "image": "shopify://shop_images/logo-transparent.png",
         "start_date": "2025-06-01",
-        "end_date": "2025-06-30",
+        "end_date": "2025-02-26",
         "custom_text": "Hurry up! Don't miss the sale!",
         "sale_page": "shopify://collections/jewelry-watches"
       }

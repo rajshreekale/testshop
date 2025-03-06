@@ -435,7 +435,50 @@
           {%- endif -%}
         </div>
       </div>
+      <!-- Gift Wrap Option : Start -->
+      <div class="gift-wrap">
+        <input type="checkbox" id="gift-wrap-checkbox" name="attributes[gift_wrap]" value="yes">
+        <label for="gift-wrap-checkbox">Add Gift Wrap (+$5.00)</label>
+      </div>
+      
+     <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let checkbox = document.getElementById("gift-wrap-checkbox");
+    let giftWrapVariantId = "9827016409371"; // Replace with actual ID
 
+    checkbox.addEventListener("change", function() {
+      let isChecked = checkbox.checked;
+
+      if (isChecked) {
+        // Add Gift Wrap product
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            id: "9827016409371", 
+            quantity: 1 
+          })
+        }).then(response => response.json())
+        .then(data => location.reload()) // Refresh cart
+        .catch(error => console.error('Error:', error));
+      } else {
+        // Remove Gift Wrap product
+        fetch('/cart/update.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            updates: { [giftWrapVariantId]: 0 } // Remove gift wrap
+          })
+        }).then(response => response.json())
+        .then(data => location.reload()) // Refresh cart
+        .catch(error => console.error('Error:', error));
+      }
+    });
+  });
+</script>
+
+     <!-- Gift Wrap Option : End -->
+                              
       <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
       <p
         class="visually-hidden"

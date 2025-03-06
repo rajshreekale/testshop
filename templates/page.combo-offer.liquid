@@ -1,0 +1,51 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'combo-offer.js' | asset_url }}" defer></script>
+
+
+<h1>Electronic Products Sale</h1>
+
+{% assign featured_products = collections['electronic-sale'].products %}  <!-- You can use any collection here -->
+
+    <div class="product-grid-container  scroll-trigger animate--slide-in" id="ProductGridContainer">
+      <div class="collection collection--empty page-width" id="product-grid">
+        <div class="product-list">
+
+          <div class="collection page-width">
+            <div class="loading-overlay gradient"></div>
+              <ul  id="product-grid" class="grid product-grid grid-col-tablet-down grid-col-desktop">
+            
+                    {% for product in featured_products %}
+                        <li> 
+                      <div class="product-item">
+                        <a href="{{ product.url }}">
+                           <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}"  width="{{ product.featured_media.width }}"
+                height="{{ product.featured_media.height }}">
+                          <h3>{{ product.title }}</h3>
+                          <p>{{ product.price | money }}</p>
+                        </a>
+                  
+                        <!-- Quantity and Add to Cart form -->
+                          <form action="/cart/add" method="post" class="add-to-cart-form">
+                            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                  
+                            <label for="quantity-{{ product.id }}">Quantity:</label>
+                            <input type="number" id="quantity-{{ product.id }}" name="quantity" min="1" value="1">
+                  
+                            <button class="combo-add-to-cart-button" data-product-x-id="{{ product.variants.first.id }}" data-product-y-id="49956808884507">
+                              Add Combo to Cart</button>
+                  
+                            <!-- <button type="submit" class="combo-add-to-cart-button" value="{{ product.id }}">Add to Cart</button> -->
+                          </form>
+                        
+                      </div>
+                      </li>
+                    {% endfor %}
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+

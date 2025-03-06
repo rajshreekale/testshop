@@ -3510,6 +3510,48 @@ details-disclosure > details {
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
+   .compare-section {
+    margin-top: 30px;
+  }
+  
+  .compare-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .compare-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background: #fff;
+  }
+  
+  .compare-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .compare-btn {
+    background: #FFD814;
+    color: #111;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #B12704;
+  }
+  
+  .compare-list {
+    display: flex;
+    gap: 15px;
+  }
 }
 
 
