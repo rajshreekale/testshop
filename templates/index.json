@@ -126,7 +126,7 @@
       "type": "coupon-section",
       "settings": {
         "coupon-hd-clr": "#000000",
-        "coupon-hd": "15 % discount Use the coupon",
+        "coupon-hd": "FLAT 15 % DISCCOUNT",
         "coupon-border-clr": "#06d9cf",
         "coupon-border": "dashed",
         "border-coupon-width": 2,
