@@ -132,7 +132,7 @@
         "border-coupon-width": 2,
         "coupon-bk-clr": "#15c5ff",
         "coupon-txt-clr": "#ffffff",
-        "coupon-right": "15OFF",
+        "coupon-right": "15-PER-OFF",
         "coupon-bk-tooltip-clr": "#a006d9",
         "coupon-txt-tooltip-clr": "#ffffff",
         "coupon-tooltip": "Copy to clipboard",
