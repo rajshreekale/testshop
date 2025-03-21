@@ -215,7 +215,10 @@
         </localization-form>
       {%- endif -%}
     </div>
-  </div>
+    <div id="countdown" class="countdown-timer"
+         data-end-date="{{ section.settings.end_date }}"
+         data-type="{{ section.settings.countdown_type }}"></div>
+    </div>
 </div>
 
 <script>
