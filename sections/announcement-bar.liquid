@@ -215,14 +215,15 @@
         </localization-form>
       {%- endif -%}
     </div>
-    <div id="countdown" class="countdown-timer"
+    <div id="announcement-countdown" class="countdown-timer"
          data-start-date="{{ section.settings.start_date }}"></div>
     </div>
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  var endDate = countdownElement.getAttribute("data-end-date");
+  var countdownElement = document.getElementById("announcement-countdown");
+  var startDate = countdownElement.getAttribute("data-start-date");
 
   function updateCountdown() {
         var now = new Date().getTime();
