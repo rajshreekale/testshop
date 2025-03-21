@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/woman-in-park-afternoon.jpeg",
             "heading": "<strong>New Inspiration</strong>",
             "heading_size": "h0",
-            "subheading": "<em>Click here to shop in your local currency. We ship over 2 million products around the world!</em>",
+            "subheading": "",
             "button_label": "Shop Now",
             "link": "shopify://collections/womens-apparel",
             "button_style_secondary": false,
