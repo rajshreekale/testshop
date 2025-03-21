@@ -218,6 +218,16 @@
   </div>
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  {% comment %}
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  {% endcomment %}
+    
+});
+</script>
+
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",
