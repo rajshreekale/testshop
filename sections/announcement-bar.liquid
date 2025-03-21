@@ -229,7 +229,14 @@ document.addEventListener("DOMContentLoaded", function() {
         var now = new Date().getTime();
         var countdownText = "";
 
-      
+        var startTime = new Date(startDate + " 00:00:00").getTime();
+        if (now < startTime) {
+            var distance = startTime - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            countdownText = `Summer Sale starts in ${days} days!`;
+        } else {
+            countdownText = "Sale has started!";
+        }
 
         
   }
