@@ -224,6 +224,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   var countdownElement = document.getElementById("announcement-countdown");
   var startDate = countdownElement.getAttribute("data-start-date");
+  var announcementText = document.getElementById("announcement_text");
 
   function updateCountdown() {
         var now = new Date().getTime();
@@ -237,14 +238,13 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             countdownText = "Sale has started!";
         }
+        announcementText.innerHTML = countdownText;
 
         
   }
 
-  {% comment %}
     updateCountdown();
     setInterval(updateCountdown, 1000);
-  {% endcomment %}
     
 });
 </script>
