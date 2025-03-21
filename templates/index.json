@@ -194,6 +194,9 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "custom_css": [
+        ".card__media .media img {min-height: 200px;}"
+      ],
       "settings": {
         "title": "<strong>Popular Products</strong>",
         "heading_size": "h2",
