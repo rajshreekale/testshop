@@ -222,6 +222,17 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+  var endDate = countdownElement.getAttribute("data-end-date");
+
+  function updateCountdown() {
+        var now = new Date().getTime();
+        var countdownText = "";
+
+      
+
+        
+  }
+
   {% comment %}
     updateCountdown();
     setInterval(updateCountdown, 1000);
@@ -306,9 +317,9 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     {
       "type": "text",
-      "id": "end_date",
-      "label": "Sale End Date (YYYY-MM-DD)",
-      "default": "2025-06-30"
+      "id": "start_date",
+      "label": "Sale Start Date (YYYY-MM-DD)",
+      "default": "2025-06-01"
     },
   ],
   "blocks": [
