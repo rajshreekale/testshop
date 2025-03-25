@@ -76,46 +76,38 @@
 document.addEventListener("DOMContentLoaded", function() {
     var countdownElement = document.getElementById("countdown");
     var countdownType = countdownElement.getAttribute("data-type");
-    var startDate = countdownElement.getAttribute("data-start-date");
-    var endDate = countdownElement.getAttribute("data-end-date");
+    var startDate = new Date(countdownElement.getAttribute("data-start-date") + " 00:00:00").getTime();
+    var endDate = new Date(countdownElement.getAttribute("data-end-date") + " 23:59:59").getTime();
 
     function updateCountdown() {
         var now = new Date().getTime();
-        var countdownText = "";
+        var distance, countdownText;
+
+        function formatTime(ms) {
+            var days = Math.floor(ms / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((ms % (1000 * 60)) / 1000);
+            return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
 
         if (countdownType === "before_sale") {
-            var startTime = new Date(startDate + " 00:00:00").getTime();
-            if (now < startTime) {
-                var distance = startTime - now;
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                countdownText = `Sale starts in ${days} days!`;
-            } else {
-                countdownText = "Sale has started!";
-            }
+            distance = startDate - now;
+            countdownText = distance > 0 ? `Sale starts in ${formatTime(distance)}` : "Sale has started!";
         } 
         else if (countdownType === "during_sale") {
-            var startTime = new Date(startDate + " 00:00:00").getTime();
-            var endTime = new Date(endDate + " 23:59:59").getTime();
-            
-            if (now < startTime) {
+            if (now < startDate) {
                 countdownText = "Sale coming soon!";
-            } else if (now >= startTime && now <= endTime) {
-                var distance = endTime - now;
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                countdownText = `Sale ends in ${days} days!`;
+            } else if (now >= startDate && now <= endDate) {
+                distance = endDate - now;
+                countdownText = `Sale ends in ${formatTime(distance)}`;
             } else {
-                countdownText = "Sale has ended check";
+                countdownText = "Sale has ended!";
             }
         } 
         else if (countdownType === "sale_till") {
-            var endTime = new Date(endDate + " 23:59:59").getTime();
-            if (now <= endTime) {
-                var distance = endTime - now;
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                countdownText = `Only ${days} days left!!`;
-            } else {
-                countdownText = "Sale has ended !!!";
-            }
+            distance = endDate - now;
+            countdownText = distance > 0 ? `Only ${formatTime(distance)} left!` : "Sale has ended!";
         }
 
         countdownElement.innerHTML = countdownText;
@@ -124,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 });
+
 </script>
 
 <style>
