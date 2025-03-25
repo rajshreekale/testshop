@@ -370,10 +370,10 @@
         ".countdown-container {margin-top: 20px;}"
       ],
       "settings": {
-        "countdown_type": "sale_till",
+        "countdown_type": "during_sale",
         "image": "shopify://shop_images/logo-transparent.png",
         "start_date": "2025-06-01",
-        "end_date": "2025-02-26",
+        "end_date": "2025-03-26",
         "custom_text": "Hurry up! Don't miss the sale!",
         "sale_page": "shopify://collections/jewelry-watches"
       }
