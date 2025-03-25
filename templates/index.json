@@ -372,7 +372,7 @@
       "settings": {
         "countdown_type": "during_sale",
         "image": "shopify://shop_images/logo-transparent.png",
-        "start_date": "2025-06-01",
+        "start_date": "2025-03-25",
         "end_date": "2025-03-26",
         "custom_text": "Hurry up! Don't miss the sale!",
         "sale_page": "shopify://collections/jewelry-watches"
