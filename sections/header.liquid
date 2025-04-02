@@ -263,7 +263,6 @@
             {%- endform -%}
           </localization-form>
         {% endif %}
-        ===={{ localization.country.iso_code }}
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
           <noscript class="small-hide medium-hide">
             {%- form 'localization', id: 'HeaderLanguageMobileFormNoScript', class: 'localization-form' -%}
