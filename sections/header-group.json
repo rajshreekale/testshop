@@ -32,11 +32,15 @@
         "auto_rotate": false,
         "change_slides_speed": 5,
         "enable_country_selector": false,
-        "enable_language_selector": false
+        "enable_language_selector": false,
+        "start_date": "2025-06-01"
       }
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        "img {width: 158px; height: 121px;}"
+      ],
       "settings": {
         "logo_position": "top-left",
         "menu": "main-header-menu",
