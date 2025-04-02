@@ -264,7 +264,7 @@
           </localization-form>
         {% endif %}
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          {%- if localization.country.iso_code == 'US' -%}
+          {%- if localization.country.iso_code != 'US' -%}
           <noscript class="small-hide medium-hide">
             {%- form 'localization', id: 'HeaderLanguageMobileFormNoScript', class: 'localization-form' -%}
               <div class="localization-form__select">
@@ -310,12 +310,14 @@
         </a>
       {%- endif -%}
 
+      {% comment %}
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when '@app' -%}
             {% render block %}
         {%- endcase -%}
       {%- endfor -%}
+      {% endcomment %}
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
