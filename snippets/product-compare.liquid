@@ -11,7 +11,7 @@
                         <img height=""; width=""; src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
                     </a>
                     <p>{{ product.title }}</p>
-                    <p class="price">₹{{ product.price | money }}</p>
+                    <p class="price">{{ product.price | money }}</p>
                     <form method="post" action="/cart/add">
                     <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                     <button type="submit" class="compare-btn">Add to cart</button>
@@ -28,7 +28,7 @@
                     <img height=""; width=""; src="{{ compared_product.featured_image | img_url: 'medium' }}" alt="{{ compared_product.title }}">
                   </a>
                 <p>{{ compared_product.title }}</p>
-                <p class="price">₹{{ compared_product.price | money }}</p>
+                <p class="price">{{ compared_product.price | money }}</p>
                <!-- Add to Cart Form -->
                <form method="post" action="/cart/add">
                 <input type="hidden" name="id" value="{{ compared_product.variants.first.id }}">
