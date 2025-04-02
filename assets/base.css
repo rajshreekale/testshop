@@ -2788,7 +2788,7 @@ details[open] > .header__submenu {
   .header__inline-menu {
     display: block;
     justify-self: center;
-    margin-top: -130px;
+    margin-top: -130px!important;
   }
 
   .header--top-center .header__inline-menu {
