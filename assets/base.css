@@ -2802,6 +2802,11 @@ details[open] > .header__submenu {
   .header--middle-left .header__inline-menu {
     margin-left: 0;
   }
+
+  .header {
+    padding-top:0px!important;
+    padding-bottom:0px!important;
+  }
 }
 
 .header__menu {
