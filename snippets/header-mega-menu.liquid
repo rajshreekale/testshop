@@ -44,16 +44,16 @@
                           aria-current="page"
                         {% endif %}
                       >
-                        {{ childlink.title | escape }}==={{ childlink }}
+                        {{ childlink.title | escape }}
                       </a>
-                      {% assign collection = collections[childlink.link] %}
+                      {% assign collection = collections[childlink.title] %}
                       {% if collection.products_count > 0 %}
                       <div class="compare-item">
                         <a href="{{ collection.products[0].url }}">
                             <img height=""; width=""; src="{{ collection.products[0].featured_image | img_url: 'medium' }}" alt="{{ collection.products[0].title }}">
                           </a>
                         <p>{{ collection.products[0].title }}</p>
-                        <p class="price">₹{{ collection.products[0].price | money }}</p>
+                        <p class="price">{{ collection.products[0].price | money }}</p>
                       </div>
                       {% endif %}
                       {%- if childlink.links != blank -%}
