@@ -10574,7 +10574,8 @@ font-size: 28px !important;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: #d90606 !important;
+    /*background: #d90606 !important;*/
+    background-color: #242833 !important;
 }
 .coupon-section .h2{
   top: 0!important;
