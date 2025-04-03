@@ -45,8 +45,15 @@
                         {% endif %}
                       >
                         {{ childlink.title | escape }}
-                        {% assign collection = collections[childlink.title] %}
                       </a>
+                      {% assign collection = collections[childlink.title] %}
+                      <div class="compare-item">
+                        <a href="{{ collection.products[0].url }}">
+                            <img height=""; width=""; src="{{ collection.products[0].featured_image | img_url: 'medium' }}" alt="{{ collection.products[0].title }}">
+                          </a>
+                        <p>{{ collection.products[0].title }}</p>
+                        <p class="price">₹{{ collection.products[0].price | money }}</p>
+                      </div>
                       {%- if childlink.links != blank -%}
                         <ul class="list-unstyled" role="list">
                           {%- for grandchildlink in childlink.links -%}
