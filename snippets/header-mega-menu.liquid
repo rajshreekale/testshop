@@ -47,7 +47,7 @@
                         {{ childlink.title | escape }}
                       </a>
                       {% assign collection = collections[childlink.title] %}
-                      {% if collection?.products_count > 0 %}
+                      {% if collection.products_count > 0 %}
                       <div class="compare-item">
                         <a href="{{ collection.products[0].url }}">
                             <img height=""; width=""; src="{{ collection.products[0].featured_image | img_url: 'medium' }}" alt="{{ collection.products[0].title }}">
