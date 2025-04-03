@@ -44,7 +44,7 @@
                           aria-current="page"
                         {% endif %}
                       >
-                        {{ childlink.title | escape }}
+                        {{ childlink.title | escape }}==={{ childlink.link }}
                       </a>
                       {% assign collection = collections[childlink.link] %}
                       {% if collection.products_count > 0 %}
