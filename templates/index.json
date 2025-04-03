@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/woman-in-park-afternoon.jpeg",
+            "image_ind": "shopify://shop_images/banner_1.jpg",
             "heading": "<strong>New Inspiration</strong>",
             "heading_size": "h0",
             "subheading": "",
