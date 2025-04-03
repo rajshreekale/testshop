@@ -46,6 +46,7 @@
                       >
                         {{ childlink.title | escape }}
                         {% assign collection = collections[childlink.title] %}
+                        {{ collection.products_count }}
                       </a>
                       {%- if childlink.links != blank -%}
                         <ul class="list-unstyled" role="list">
