@@ -47,6 +47,7 @@
                         {{ childlink.title | escape }}
                       </a>
                       {% assign collection = collections[childlink.title] %}
+                      {{ collection.products_count }}
                       {% if collection.products_count > 0 %}
                       <div class="compare-item">
                         <a href="{{ collection.products[0].url }}">
