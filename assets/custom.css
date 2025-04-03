@@ -10446,6 +10446,12 @@ Go Top CSS
 .search-modal.modal__content{
   z-index: 41111;
 }
+
+.ind {
+  .card--card.card--media>.card__content{
+    background: black;
+  }
+}
 /* body.overflow-hidden .header__inline-menu{
   display: none;
 } */
