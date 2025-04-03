@@ -10420,7 +10420,8 @@ Go Top CSS
 }
 
 .card--card.card--media>.card__content{
-  background: #ab0000;
+  /*background: #ab0000;*/
+  background: #606267;
 }
 .card--card.card--media>.card__content h3 {
     font-size: 2.4rem;
