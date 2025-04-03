@@ -2960,12 +2960,6 @@ details-disclosure > details {
   background-attachment: fixed;
 }
 
-.ind {
-  .gradient {
-    background: black;
-  }
-}
-
 @media screen and (forced-colors: active) {
   .icon {
     color: CanvasText;
