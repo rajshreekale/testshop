@@ -10609,3 +10609,7 @@ font-size: 28px !important;
 .card--card.card--media>.card__content a:hover {
   color: black!important;
 }
+
+.card--card.card--media>.card__content h3 {
+  color: black!important;
+}
