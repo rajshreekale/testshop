@@ -3568,7 +3568,7 @@ details-disclosure > details {
     color: white!important;
   }
 
-  .banner__box.gradient {
+  .banner__box {
         background: white;
     color: black;
   }
