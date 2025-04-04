@@ -3569,8 +3569,8 @@ details-disclosure > details {
   }
 
   .banner__box {
-        background: white;
-    color: black;
+        background: white!important;
+    color: black!important;
   }
 
   h2 {
