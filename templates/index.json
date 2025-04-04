@@ -368,7 +368,7 @@
     "countdown_timer_sale_98bRVf": {
       "type": "countdown-timer-sale",
       "custom_css": [
-        ".countdown-container {margin-top: 20px;}"
+        ".countdown-container {margin-top: 20px; margin-bottom: 20px;}"
       ],
       "settings": {
         "countdown_type": "during_sale",
