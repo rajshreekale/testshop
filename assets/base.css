@@ -3579,7 +3579,7 @@ details-disclosure > details {
 }
 
 .card--card.card--media>.card__content {
-  background-color: white;
+  background-color: white!important;
 }
 
 
