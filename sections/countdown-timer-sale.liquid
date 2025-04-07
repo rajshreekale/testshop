@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var countdownType = countdownElement.getAttribute("data-type");
     var startDate = new Date(countdownElement.getAttribute("data-start-date") + " 00:00:00").getTime();
     var endDate = new Date(countdownElement.getAttribute("data-end-date") + " 23:59:59").getTime();
+  function pad(n) {
+    return n.toString().padStart(2, '0');
+}
 
     function updateCountdown() {
         var now = new Date().getTime();
@@ -88,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var hours = Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((ms % (1000 * 60)) / 1000);
-            return `<span style='color: red; font-weight: bold;'>${days}d ${hours}h ${minutes}m ${seconds}s</span>`;
+            return `<span style='color: red; font-weight: bold;'>${pad(days)}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s</span>`;
         }
 
         if (countdownType === "before_sale") {
