@@ -8,7 +8,7 @@
           {% assign collection_handle = product.collections.first.handle %}
           {% assign collection = collections[collection_handle] %}
           
-          {% for compared_product in collection.products limit: 3 %}
+          {% for compared_product in collection.products limit: 4 %}
             {% if compared_product.id != product.id %}
               <div class="compare-item">
                 <a href="{{ compared_product.url }}">
