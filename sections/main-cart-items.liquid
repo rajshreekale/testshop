@@ -443,6 +443,8 @@
           {% assign product_in_cart = true %}
         {% endif %}
       {% endfor %}
+
+      ==={{ product_in_cart }}
       <!-- Gift Wrap Option : Start -->
       <div class="gift-wrap">
         <input type="checkbox" id="gift-wrap-checkbox" name="attributes[gift_wrap]" value="yes" {% if product_in_cart %}checked{% endif %}>
