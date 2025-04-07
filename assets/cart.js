@@ -54,7 +54,6 @@ class CartItems extends HTMLElement {
       document.activeElement.getAttribute("name"),
       event.target.dataset.quantityVariantId
     );
-    window.location.reload();
   }
 
   onCartUpdate() {
