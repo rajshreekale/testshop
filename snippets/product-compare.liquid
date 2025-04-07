@@ -5,19 +5,6 @@
       <!-- Recommended Products -->
       <div class="recommendations">
         <div class="compare-list">
-            <div>
-                <div class="compare-item main-product">
-                    <a href="{{ product.url }}">
-                        <img height=""; width=""; src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-                    </a>
-                    <p>{{ product.title }}</p>
-                    <p class="price">{{ product.price | money }}</p>
-                    <form method="post" action="/cart/add">
-                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                    <button type="submit" class="compare-btn">Add to cart</button>
-                    </form>
-                </div> 
-            </div>
           {% assign collection_handle = product.collections.first.handle %}
           {% assign collection = collections[collection_handle] %}
           
