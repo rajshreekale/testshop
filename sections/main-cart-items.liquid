@@ -438,7 +438,7 @@
       <!-- Gift Wrap Option : Start -->
       <div class="gift-wrap">
         <input type="checkbox" id="gift-wrap-checkbox" name="attributes[gift_wrap]" value="yes">
-        <label for="gift-wrap-checkbox">Add Gift Wrap (+{{ localization.country.currency.symbol }} 100.00) </label>
+        <label for="gift-wrap-checkbox">Add Gift Wrap {%- if localization.country.iso_code != 'US' -%}  (+{{ localization.country.currency.symbol }} 100.00) {% else %}(+{{ localization.country.currency.symbol }} 1.00){% endif %}</label>
       </div>
       
      <script>
