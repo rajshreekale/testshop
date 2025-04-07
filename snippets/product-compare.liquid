@@ -10,7 +10,7 @@
                     <a href="{{ product.url }}">
                         <img height=""; width=""; src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
                     </a>
-                    <p>{{ product.title }}===</p>
+                    <p>{{ product.title }}</p>
                     <p class="price">{{ product.price | money }}</p>
                     <form method="post" action="/cart/add">
                     <input type="hidden" name="id" value="{{ product.variants.first.id }}">
