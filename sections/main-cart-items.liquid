@@ -436,10 +436,9 @@
         </div>
       </div>
 
-      {% assign target_product_id = 50053839028507 %}
+      {% assign target_product_id = 9827016409371 %}
       {% assign product_in_cart = false %}
       {% for item in cart.items %}
-        ===={{ item.product.id }} ==={{ target_product_id }}
         {% if item.product.id == target_product_id %}
           {% assign product_in_cart = true %}
         {% endif %}
