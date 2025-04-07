@@ -435,12 +435,19 @@
           {%- endif -%}
         </div>
       </div>
+
+      {% assign target_product_id = 50053839028507 %}
+      {% assign product_in_cart = false %}
+      {% for item in cart.items %}
+        {% if item.product.id == target_product_id %}
+          {% assign product_in_cart = true %}
+        {% endif %}
+      {% endfor %}
       <!-- Gift Wrap Option : Start -->
       <div class="gift-wrap">
         <input type="checkbox" id="gift-wrap-checkbox" name="attributes[gift_wrap]" value="yes">
         <label for="gift-wrap-checkbox">Add Gift Wrap {%- if localization.country.iso_code != 'US' -%}  (+ {{ localization.country.currency.symbol }} 100.00) {% else %}(+{{ localization.country.currency.symbol }} 1.00){% endif %}</label>
       </div>
-      {{ cart.items }}
       
      <script>
    document.addEventListener("DOMContentLoaded", function() {
