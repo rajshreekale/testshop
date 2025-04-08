@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } 
         else if (countdownType === "during_sale") {
             if (now < startDate) {
-                countdownText = "Sale coming soon!";
+                countdownText = "Sale coming soon! check...";
             } else if (now >= startDate && now <= endDate) {
                 distance = endDate - now;
                 countdownText = `Sale ends in ${formatTime(distance)}`;
