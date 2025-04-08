@@ -240,6 +240,7 @@
                                 {% render 'icon-info' %}
                               </button>
                             {%- endif -%}
+                            {% if item.product.id != 9827016409371 %}
                             <quantity-input class="quantity cart-quantity">
                               <button class="quantity__button no-js-hidden" name="minus" type="button">
                                 <span class="visually-hidden">
@@ -272,7 +273,9 @@
                                 {% render 'icon-plus' %}
                               </button>
                             </quantity-input>
+                            {% endif %}
                           </div>
+                          {% if item.product.id != 9827016409371 %}
                           <cart-remove-button
                             id="Remove-{{ item.index | plus: 1 }}"
                             data-index="{{ item.index | plus: 1 }}"
@@ -285,6 +288,7 @@
                               {% render 'icon-remove' %}
                             </a>
                           </cart-remove-button>
+                          {% endif %}
                         </div>
                         {%- if has_qty_rules or has_vol_pricing -%}
                           <button
