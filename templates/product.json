@@ -72,6 +72,13 @@
             "text_style": "body"
           }
         },
+        "text_AthxUV": {
+          "type": "text",
+          "settings": {
+            "text": "Care Info :{{ product.metafields.custom.fabric_info_details.value.care_instructions.value }}",
+            "text_style": "body"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -91,6 +98,7 @@
         "buy_buttons",
         "description",
         "text_nFjkbG",
+        "text_AthxUV",
         "share"
       ],
       "settings": {
