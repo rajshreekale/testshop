@@ -65,6 +65,13 @@
           "type": "description",
           "settings": {}
         },
+        "text_nFjkbG": {
+          "type": "text",
+          "settings": {
+            "text": "Fitting : {{ product.metafields.custom.fit_style | metafield_text }}",
+            "text_style": "body"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -83,6 +90,7 @@
         "custom_liquid_CHaLjy",
         "buy_buttons",
         "description",
+        "text_nFjkbG",
         "share"
       ],
       "settings": {
