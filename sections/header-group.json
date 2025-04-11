@@ -17,17 +17,16 @@
         "announcement_EUwyDV": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": ""
+            "text": "Free Shipping World wide for all orders over $199 Shop Now",
+            "link": "shopify://collections"
           }
         }
       },
       "block_order": [
         "announcement_EUwyDV"
       ],
-      "disabled": true,
       "settings": {
-        "color_scheme": "background-2",
+        "color_scheme": "inverse",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
