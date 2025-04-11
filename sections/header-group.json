@@ -39,7 +39,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        "img {width: 158px; height: 121px;}"
+        "img {width: 158px; height: 101px;}"
       ],
       "settings": {
         "logo_position": "top-left",
