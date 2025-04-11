@@ -156,9 +156,9 @@
     "featured_collection_hknbHA": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "<strong>Latest Products</strong>",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>Mauris quis nisi elit curabitur sodales libero ac interdum finibus.</p>",
         "show_description": false,
         "description_style": "body",
         "collection": "",
