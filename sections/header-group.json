@@ -25,6 +25,7 @@
       "block_order": [
         "announcement_EUwyDV"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "inverse",
         "show_line_separator": true,
