@@ -10613,3 +10613,10 @@ font-size: 28px !important;
 .card--card.card--media>.card__content h3 {
   color: black!important;
 }
+
+/*Custom-css*/
+.three--main-collections{
+  max-width: 1400px;
+  margin: 0 auto;
+  background: red;
+}
