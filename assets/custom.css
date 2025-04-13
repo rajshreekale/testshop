@@ -10616,7 +10616,9 @@ font-size: 28px !important;
 
 /*Custom-css*/
 .three--main-collections{
+  background: #f8f8f7;
+}
+.three--main-collections .collection-list-wrapper{
   max-width: 1400px;
   margin: 0 auto;
-  background: red;
 }
