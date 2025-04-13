@@ -19,7 +19,7 @@
             "image_ind": "shopify://shop_images/side-view-women-wearing-sari_2.jpg",
             "heading": "<strong>New Inspiration</strong>",
             "heading_size": "h0",
-            "subheading": "",
+            "subheading": "abcd",
             "button_label": "Shop Now",
             "link": "shopify://collections/womens-apparel",
             "button_style_secondary": false,
