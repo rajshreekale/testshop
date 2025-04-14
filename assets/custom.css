@@ -10685,6 +10685,6 @@ font-size: 28px !important;
   margin: 0 auto;
 }
 .popular-product-collection > div .page-width-desktop{
-   width: 100%; 
+   max-width: 100%; 
 }
 
