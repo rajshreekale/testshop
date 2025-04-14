@@ -10694,6 +10694,7 @@ font-size: 28px !important;
   max-width: 1400px;
   padding: 0 5rem;
   height: 221px;
+  margin-top: 5rem;
 }
 .coupon-row > div{
   width: calc(100% / 3);
