@@ -10717,7 +10717,8 @@ font-size: 28px !important;
   background: #eef0f2!important;
 }
 .coupon-card-text{
-  
+  position: absolute;
+  top: 0;
 }
 .coupon-card-top-text{
   
