@@ -10648,6 +10648,11 @@ font-size: 28px !important;
 }
 .best-category-img img{
   border-radius: 100%;
+  object-fit: cover;
+  transition: all .3s ease;
+}
+.best-category-img img:hover {
+  transform: scale(1.2);
 }
 .best-category-text{
   
