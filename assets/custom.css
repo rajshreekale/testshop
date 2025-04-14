@@ -10652,8 +10652,8 @@ font-size: 28px !important;
   line-height: 0;
   overflow: hidden;
   border-radius: 100%;
-  height: 200px;
-  width:200px;
+  height: 180px;
+  width: 180px;
 }
 .best-category-img img{
   object-fit: cover;
