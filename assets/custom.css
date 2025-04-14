@@ -10694,12 +10694,12 @@ font-size: 28px !important;
   max-width: 1400px;
   padding: 0 5rem;
   height: 221px;
-  border: 2px dashed #d2d2d2!important;
 }
 .coupon-row > div{
   width: calc(100% / 3);
   display: flex;
   height: 100%;
+  border: 2px dashed #d2d2d2!important;
 }
 .coupon-row > div{
   
