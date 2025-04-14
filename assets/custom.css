@@ -10626,7 +10626,7 @@ font-size: 28px !important;
 .best-category h2{
    text-align: center;
    font-size: 30px;
-  font-weight: bold;
+   font-weight: bold;
 }
 .categories-tagline{
    text-align: center;
@@ -10634,6 +10634,7 @@ font-size: 28px !important;
 }
 .best-category-section{
   max-width: 1400px;
+  padding: 0 5rem;
   margin: 0 auto;
 }
 
