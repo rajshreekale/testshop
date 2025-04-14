@@ -10625,7 +10625,7 @@ font-size: 28px !important;
   left: 5rem;
 }
 .slideshow [aria-label="1 of 3"] .slideshow__text.banner__box{
-  background-color: none!important;
+  background: transform!important;
 }
 .three--main-collections{
   background: #f8f8f7;
