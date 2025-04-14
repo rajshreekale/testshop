@@ -10624,6 +10624,9 @@ font-size: 28px !important;
   position: relative;
   left: 5rem;
 }
+.slideshow [aria-label="1 of 3"] .slideshow__text.banner__box{
+  background-color: none!important;
+}
 .three--main-collections{
   background: #f8f8f7;
   padding: 30px 0;
