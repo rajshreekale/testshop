@@ -10620,7 +10620,9 @@ font-size: 28px !important;
 
 /*Custom-css*/
 .slideshow__text.banner__box{
-  max-width: 60rem;  
+  max-width: 60rem!important;  
+  position: relative;
+  left: 5rem;
 }
 .three--main-collections{
   background: #f8f8f7;
