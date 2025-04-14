@@ -1,9 +1,7 @@
 <style>.coupon-section{border:{{section.settings.border-coupon-width}}px {{section.settings.coupon-border}} {{section.settings.coupon-border-clr}};   width:100%;margin-left:auto;margin-right :auto;}.coupon-section input{text-align:center;margin:5px;padding:5px;}.coupon-section .h2{color:{{section.settings.coupon-hd-clr}};  }.tooltip-coupon{position: relative;display: inline-block;padding-bottom : 25px;}.tooltip-coupon .tooltipcoupon {visibility: hidden;width: auto;background-color: {{section.settings.coupon-bk-tooltip-clr}};color: {{section.settings.coupon-txt-tooltip-clr}};text-align: center;border-radius: 6px;padding: 5px;position: absolute;z-index: 1;bottom: 150%;left: 50%;margin-left: -75px;opacity: 0;transition: opacity 0.3s;}.tooltip-coupon .tooltipcoupon::after {content: "";position: absolute;top: 100%;left: 50%;margin-left: -5px;border-width: 5px;border-style: solid;border-color: #555 transparent transparent transparent;}.tooltip-coupon:hover .tooltipcoupon {visibility: visible;opacity: 1;}.call{display:inline-block;text-decoration:none;border-radius:5px;padding:10px;background:{{section.settings.coupon-bk-clr}};max-width:30%;font:bold 24px Arial;box-shadow:0 0 15px gray,0 0 10px gray inset;text-align:center;color:{{section.settings.coupon-txt-clr}};  }.tooltip-coupon button{background :{{section.settings.coupon-bk-btn-clr}};color:{{section.settings.coupon-txt-btn-clr}};border : none;}.coupon-section {background: var(--color-body);}.coupon-section h2 {position: relative;top: -18px;background: var(--color-body);width: 70%;margin-left: auto;margin-right: auto;}</style>  
 <div class="coupon-row">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
+  <div></div>
+  <div></div>
   <div class="coupon-section center">
      {% if section.settings.coupon-hd !=blank %}
      <h2 class="h2"> <i class="fa fa-cut"></i> {{section.settings.coupon-hd}} </h2>
