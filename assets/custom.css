@@ -10706,3 +10706,6 @@ font-size: 28px !important;
 .coupon-card-add img{
   width: 100%;
 }
+.coupon-section{
+  height: calc(100% - 10px)
+}
