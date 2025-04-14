@@ -10581,8 +10581,9 @@ font-size: 28px !important;
 .coupon-section .h2{
   top: 0!important;
   color: #000!important;
-  font-size: 22px;
-  padding: 45px 0 10px 0;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 40px 0 10px 0;
 }
 .coupon-section .call{
     box-shadow: none !important;
