@@ -10696,7 +10696,8 @@ font-size: 28px !important;
 }
 .coupon-row > div{
   width: calc(100% / 3);
-  display: flex
+  display: flex;
+  height: 100%;
 }
 .coupon-row > div{
   
