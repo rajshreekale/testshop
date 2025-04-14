@@ -10651,6 +10651,7 @@ font-size: 28px !important;
   margin: 0;
   line-height: 0;
   overflow: hidden;
+  border-radius: 100%;
 }
 .best-category-img img{
   border-radius: 100%;
