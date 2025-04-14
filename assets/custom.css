@@ -10570,7 +10570,6 @@ font-size: 28px !important;
    padding-bottom: 10px;
 }
 .coupon-section {
-    border: 2px dashed #d2d2d2!important;
     width: 100%;
     max-width: calc(1400px - 10rem);
     margin-left: auto;
@@ -10695,6 +10694,7 @@ font-size: 28px !important;
   max-width: 1400px;
   padding: 0 5rem;
   height: 221px;
+  border: 2px dashed #d2d2d2!important;
 }
 .coupon-row > div{
   width: calc(100% / 3);
