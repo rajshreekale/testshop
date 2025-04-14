@@ -10721,10 +10721,12 @@ font-size: 28px !important;
   top: 0;
 }
 .coupon-card-top-text{
-  
+  font-size: 14px; 
+  text-transform: capitalize;
 }
 .coupon-card-heading{
-  
+  font-size: 30px; 
+  font-weight: bold;
 }
 .coupon-card-button{
   
