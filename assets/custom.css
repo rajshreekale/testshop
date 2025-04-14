@@ -10687,4 +10687,10 @@ font-size: 28px !important;
 .popular-product-collection > div .page-width-desktop{
    max-width: 100%; 
 }
-
+.coupon-row{
+  display: flex;
+  flex-direction: row;
+}
+.coupon-row > div{
+  width: calc(100% / 3);
+}
