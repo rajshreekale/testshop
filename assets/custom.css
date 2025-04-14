@@ -10624,6 +10624,9 @@ font-size: 28px !important;
   position: relative;
   left: 7rem;
 }
+.slideshow .slideshow__text.banner__box{
+  background: #ffffffcc!important;
+}
 .slideshow [aria-label="1 of 3"] .slideshow__text.banner__box{
   background: transparent!important;
 }
