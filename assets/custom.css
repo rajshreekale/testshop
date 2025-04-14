@@ -10646,6 +10646,12 @@ font-size: 28px !important;
 .best-category-block{
   text-align: center;
 }
+.best-category-img{
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  overflow: hidden;
+}
 .best-category-img img{
   border-radius: 100%;
   object-fit: cover;
