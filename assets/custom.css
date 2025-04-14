@@ -10619,6 +10619,9 @@ font-size: 28px !important;
 }
 
 /*Custom-css*/
+.slideshow__text.banner__box{
+  width: 60rem;  
+}
 .three--main-collections{
   background: #f8f8f7;
   padding: 30px 0;
