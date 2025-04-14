@@ -10589,12 +10589,11 @@ font-size: 28px !important;
     min-width: 180px;
 }
 .tooltip-coupon button {
-    background: #000000;
-    color: #fff;
+    background: #000000 !important;
+    color: #f1f1f1 !important;
     border: none;
     border-radius: 10px;
     padding: 7px;
-    /* margin-top: -3px; */
     position: relative;
     top: -3px;
     cursor: pointer;
