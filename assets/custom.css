@@ -10572,7 +10572,7 @@ font-size: 28px !important;
 .coupon-section {
     border: 2px dashed #d2d2d2!important;
     width: 100%;
-    max-width: 1400px;
+    max-width: calc(1400px - 10rem);
     margin-left: auto;
     margin-right: auto;
     /*background: #d90606 !important;*/
