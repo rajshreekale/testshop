@@ -10663,10 +10663,12 @@ font-size: 28px !important;
   transform: scale(1.2);
 }
 .best-category-text{
-  
+  font-size: 16px;
+  font-weight: bold;
 }
 .best-category-count{
-  
+  font-size: 14px;
+  font-weight: bold;
 }
 
 
