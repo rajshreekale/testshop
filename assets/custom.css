@@ -10727,11 +10727,13 @@ position: absolute;
   text-transform: capitalize;
 }
 .coupon-card-heading{
-    font-size: 26px;
-    font-weight: 700;
-    margin: 0;
-    line-height: 28px;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 28px;
 }
-.coupon-card-button{
-  
+.coupon-card-button a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
 }
