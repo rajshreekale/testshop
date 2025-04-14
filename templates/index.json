@@ -35,9 +35,9 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/bearded-young-man.jpg",
-            "heading": "<strong>New Season Canvas</strong>",
+            "heading": "Men's latest fashion sale",
             "heading_size": "h0",
-            "subheading": "",
+            "subheading": "Trending Item starting at $ <strong>20</strong>.00",
             "button_label": "Shop Now",
             "link": "shopify://collections/mens-apparel",
             "button_style_secondary": false,
