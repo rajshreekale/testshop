@@ -10717,14 +10717,16 @@ font-size: 28px !important;
   background: #eef0f2!important;
 }
 .coupon-card-text{
-position: absolute;
-    top: 0;
-    width: 70%;
-    padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 70%;
+  padding: 20px;
 }
 .coupon-card-top-text{
-  font-size: 14px; 
-  text-transform: capitalize;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #838383;
 }
 .coupon-card-heading{
   font-size: 26px;
