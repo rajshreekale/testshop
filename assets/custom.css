@@ -10727,8 +10727,10 @@ position: absolute;
   text-transform: capitalize;
 }
 .coupon-card-heading{
-  font-size: 26px; 
-  font-weight: bold;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 28px;
 }
 .coupon-card-button{
   
