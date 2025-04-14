@@ -123,6 +123,15 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "custom_liquid_jkMGpd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "collection_list_XNirDa": {
       "type": "collection-list",
       "blocks": {
@@ -382,6 +391,7 @@
   },
   "order": [
     "slideshow_XThfjA",
+    "custom_liquid_jkMGpd",
     "collection_list_XNirDa",
     "coupon_section_E8DQqk",
     "custom_liquid_kWgn3D",
