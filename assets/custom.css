@@ -10682,7 +10682,7 @@ font-size: 28px !important;
 }
 .popular-product-collection > div{
   max-width: 1400px;
-  background: #000;
+  background: #ccc;
   margin: 0 auto;
 }
 
