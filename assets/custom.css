@@ -10646,6 +10646,9 @@ font-size: 28px !important;
 .best-category-block{
   text-align: center;
 }
+.best-category-block a{
+  text-decoration: none;
+}
 .best-category-img{
   padding: 0;
   margin: 20px auto 10px;
