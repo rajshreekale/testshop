@@ -10583,12 +10583,13 @@ font-size: 28px !important;
   color: #FFEB3B!important;
 }
 .coupon-section .call{
-    box-shadow: none!important;
-    border: 1px solid #ff4d4d!important;
-    background: #6d1a00!important;
+    box-shadow: none !important;
+    border: 1px solid #8d0606 !important;
+    background: #cb3000 !important;
+    min-width: 180px;
 }
 .tooltip-coupon button {
-    background: #f3f1f1;
+    background: #000000;
     color: #000000;
     border: none;
     border-radius: 10px;
