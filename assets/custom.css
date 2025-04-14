@@ -10709,7 +10709,7 @@ font-size: 28px !important;
   
 }
 .coupon-card-add{
-  
+  position: relative;
 }
 .coupon-card-add img{
   width: 100%;
