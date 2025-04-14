@@ -10690,7 +10690,12 @@ font-size: 28px !important;
 .coupon-row{
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 .coupon-row > div{
   width: calc(100% / 3);
+}
+.coupon-row > div{
+  
 }
