@@ -10680,7 +10680,8 @@ font-size: 28px !important;
   margin: 0;
   color: #666666;
 }
-.popular-product-collection{
+.popular-product-collection > div{
+  max-width: 1400px;
   background: #000;
 }
 
