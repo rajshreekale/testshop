@@ -10700,7 +10700,7 @@ font-size: 28px !important;
   width: calc(100% / 3);
   display: flex;
   height: 100%;
-  border: 2px dashed #d2d2d2!important;
+  border: 2px dashed #f3f3f3!important;
 }
 .coupon-row > div{
   
@@ -10714,5 +10714,5 @@ font-size: 28px !important;
 .coupon-section{
   height: 100%;
   border: 0 !important;
-  background: #d2d2d2!important;
+  background: #f3f3f3!important;
 }
