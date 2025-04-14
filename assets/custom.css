@@ -10623,3 +10623,7 @@ font-size: 28px !important;
   max-width: 1400px;
   margin: 0 auto;
 }
+.best-category h2{
+   text-align: center;
+  font-size: 30px;
+}
