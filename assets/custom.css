@@ -10784,9 +10784,10 @@ font-size: 28px !important;
   margin: 0;
 }
 .banner-image{
-  height: 600px; 
+  height: 700px; 
   width: 700px; 
   display: block!important;
+  background-size: 90%;
 }
 .sale-starts-on{
   font-size: 18px;
