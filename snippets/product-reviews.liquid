@@ -26,6 +26,11 @@
 </script>
 
 <div class="review row">
+  {% if localization.country.iso_code == 'US' %}
+    <div id="language">en-US</div>
+  {% else %}
+    <div id="language">hi</div>
+  {% endif %}
   <div class="review-card" id="review-card">
     <!-- Dynamic content will be injected here -->
   </div>
