@@ -10809,3 +10809,6 @@ font-size: 28px !important;
   background-color: #8f0070!important;
   color: #ffd600!important;
 }
+.countdown-timer span{
+  font-size: 28px;
+}
