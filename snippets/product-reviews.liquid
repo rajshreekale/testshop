@@ -6,6 +6,7 @@
     client.sync({ initial: true }).then((response) => {
       console.log(response.entries[0]);
       console.log(response.assets);
+      const locale = document.getElementById('language').innerHTML;
       const card = document.getElementById("review-card");
       card.innerHTML = `
         <div class="product-info">
