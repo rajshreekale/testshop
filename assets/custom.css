@@ -10781,3 +10781,8 @@ font-size: 28px !important;
   font-size: 22px;
   font-weoght: bold
 }
+.banner-image{
+  height: 600px; 
+  width: 700px; 
+  display: block!important;
+}
