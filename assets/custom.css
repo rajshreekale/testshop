@@ -10779,10 +10779,20 @@ font-size: 28px !important;
 }
 .sale-tagline{
   font-size: 22px;
-  font-weoght: bold
+  font-weoght: bold;
+  font-style: italic;
 }
 .banner-image{
   height: 600px; 
   width: 700px; 
   display: block!important;
+}
+.sale-starts-on{
+  font-size: 18px;
+  font-weoght: bold;
+}
+.sale-starts-on span{
+  font-size: 22px;
+  font-weoght: bold;
+  display: block;
 }
