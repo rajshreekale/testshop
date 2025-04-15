@@ -54,8 +54,8 @@
   <div style="background-image: url('{{ section.settings.image | image_url }}'); height: 600px; width: 600px; display: block!important;"></div>
   <div class="countdown-overlay">
     {% if section.settings.countdown_type == "before_sale" %}
-      <p>{{ section.settings.custom_text }}</p>
-      <p>Sale Starts on: {{ section.settings.start_date }}</p>
+      <p class="sale-tagline">{{ section.settings.custom_text }}</p>
+      <p class="sale-starts-on"> Sale Starts on: <span> {{ section.settings.start_date }} </span></p>
     {% elsif section.settings.countdown_type == "during_sale" %}
       <p>{{ section.settings.custom_text }}</p>
       <p>Sale Period: {{ section.settings.start_date }} - {{ section.settings.end_date }}</p>
