@@ -11,11 +11,11 @@
       const card = document.getElementById("review-card");
       card.innerHTML = `
         <div class="product-info">
-          <img src="${response.entries[0].fields.productImage[locale].fields.file[locale].url}" alt="${response.entries[0].fields.title[locale]}">
+          <img src="${response.entries[0].fields.productImage[locale].fields.file['en-US'].url}" alt="${response.entries[0].fields.title[locale]}">
           <h4>${response.entries[0].fields.title[locale]}</h4>
         </div>
         <div class="reviewer">${response.entries[0].fields.authorName[locale]}</div>
-        <div class="stars">${generateStars(response.entries[0].fields.rating[locale])}</div>
+        <div class="stars">${generateStars(response.entries[0].fields.rating['en-US'])}</div>
         <div class="review-text">${response.entries[0].fields.productDescription[locale]}</div>
       `;
     });
