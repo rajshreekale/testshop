@@ -10774,4 +10774,6 @@ font-size: 28px !important;
     font-family: arial;
     height: 100%;
 }
-
+.countdown-overlay .countdown-timer span{
+    display: block;
+}
