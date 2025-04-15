@@ -10772,6 +10772,7 @@ font-size: 28px !important;
     color: #000000!important;
     font-family: arial;
     height: 100%;
+    border: 3px dashed #830066;
 }
 .countdown-overlay .countdown-timer span{
     display: block;
