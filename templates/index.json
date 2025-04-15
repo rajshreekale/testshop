@@ -377,13 +377,13 @@
     "countdown_timer_sale_98bRVf": {
       "type": "countdown-timer-sale",
       "custom_css": [
-        ".countdown-container {margin-top: 20px; margin-bottom: 20px;}"
+        ".countdown-container {margin-top: 0px; margin-bottom: 0px;}"
       ],
       "settings": {
         "countdown_type": "during_sale",
         "image": "shopify://shop_images/logo-transparent.png",
-        "start_date": "2025-03-25",
-        "end_date": "2025-04-12",
+        "start_date": "2025-04-15",
+        "end_date": "2025-05-15",
         "custom_text": "Hurry up! Don't miss the sale!",
         "sale_page": "shopify://collections/jewelry-watches"
       }
