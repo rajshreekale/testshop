@@ -57,12 +57,12 @@
       <p class="sale-tagline">{{ section.settings.custom_text }}</p>
       <p class="sale-starts-on"> Sale Starts on: <span> {{ section.settings.start_date }} </span></p>
     {% elsif section.settings.countdown_type == "during_sale" %}
-      <p>{{ section.settings.custom_text }}</p>
-      <p>Sale Period: {{ section.settings.start_date }} - {{ section.settings.end_date }}</p>
+      <p class="sale-tagline">{{ section.settings.custom_text }}</p>
+      <p class="sale-starts-on">Sale Period: {{ section.settings.start_date }} - {{ section.settings.end_date }}</p>
      
     {% elsif section.settings.countdown_type == "sale_till" %}
-      <p>{{ section.settings.custom_text }}</p>
-      <p>Sale Ends on: {{ section.settings.end_date }}</p>
+      <p class="sale-tagline">{{ section.settings.custom_text }}</p>
+      <p class="sale-starts-on">Sale Ends on: {{ section.settings.end_date }}</p>
     {% endif %}
     
     <div id="countdown" class="countdown-timer"
