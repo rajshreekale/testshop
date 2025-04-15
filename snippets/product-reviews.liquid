@@ -28,8 +28,7 @@
 </script>
 
 <div class="review row">
-  {{ localization.language.iso_code }}
-  {% if localization.country.iso_code == 'US' %}
+  {% if localization.language.iso_code == 'en' %}
     <div id="language">en-US</div>
   {% else %}
     <div id="language">hi</div>
