@@ -4,7 +4,7 @@
       accessToken: 'mErSxsEkpOUs_56fRjR21_mwLSkEBtld2ue8arOImNo',
     });
     client.sync({ initial: true }).then((response) => {
-      console.log(response.entries[0].fields.title[en-US]);
+      console.log(response.entries[0].fields.title);
       console.log(response.assets);
       const card = document.getElementById("review-card");
       card.innerHTML = `
