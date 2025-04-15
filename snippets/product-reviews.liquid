@@ -1,6 +1,9 @@
 <script>
-    var contentful = require('contentful');
-  console.log('contenful', contentful)
+    var client = contentful.createClient({
+      space: 'cfexampleapi',
+      accessToken: 'b4c0n73n7fu1',
+    });
+    console.log("==client", client)
 </script>
 
 Hello===
