@@ -10801,9 +10801,11 @@ font-size: 28px !important;
   font-weight: bold;
 }
 .sale-starts-on span{
-  font-size: 22px;
-  font-weight: bold;
-  display: block;
+    font-size: 22px;
+    font-weight: 700;
+    display: block;
+    color: #ffffff;
+    background: #fe0067;
 }
 .countdown-btn{
   background-color: #8f0070!important;
