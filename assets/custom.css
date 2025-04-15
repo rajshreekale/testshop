@@ -10765,7 +10765,7 @@ font-size: 28px !important;
 .countdown-container{
   background: #ffcb00;
   padding: 20px;
-  height: 500px
+  height: 500px!important;
 }
 .countdown-overlay{
     background: rgb(255 224 69 / 60%)!important;
