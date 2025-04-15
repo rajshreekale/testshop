@@ -10762,3 +10762,7 @@ font-size: 28px !important;
   font-size: 18px;
   color: #000;
 }
+.countdown-container{
+  background: #ffcb00;
+  padding: 20px;
+}
