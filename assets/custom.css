@@ -10768,9 +10768,8 @@ font-size: 28px !important;
 }
 .countdown-overlay{
     background: rgb(255 224 69 / 60%)!important;
-    padding: 20px;
     border-radius: 5px;
-    color: #000000;
+    color: #000000!important;
     font-family: arial;
     height: 100%;
 }
