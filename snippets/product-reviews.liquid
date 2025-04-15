@@ -3,7 +3,10 @@
       space: 'll66snvweeb7',
       accessToken: 'mErSxsEkpOUs_56fRjR21_mwLSkEBtld2ue8arOImNo',
     });
-    console.log("==client", client)
+    client.sync({ initial: true }).then((response) => {
+      console.log(response.entries);
+      console.log(response.assets);
+    });
 </script>
 
 Hello===
