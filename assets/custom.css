@@ -10774,6 +10774,7 @@ font-size: 28px !important;
     font-family: arial;
     height: 100%;
     border: 3px dashed #830066;
+    width: 400px;
 }
 .countdown-overlay .countdown-timer span{
     display: block;
@@ -10789,6 +10790,7 @@ font-size: 28px !important;
   width: 700px; 
   display: block!important;
   background-size: 90%;
+  background-position: center;
 }
 .sale-starts-on{
   font-size: 18px;
