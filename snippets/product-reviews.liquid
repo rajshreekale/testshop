@@ -6,8 +6,23 @@
     client.sync({ initial: true }).then((response) => {
       console.log(response.entries);
       console.log(response.assets);
-      document.getElementById('product-info-1-title').innerHTML(response.entries[0].fields.title);
+      const card = document.getElementById("review-card");
+      card.innerHTML = `
+        <div class="product-info">
+          <img src="${response.entries[0].fields.image}" alt="${response.entries[0].title.en-US}">
+          <h4>${response.entries[0].title.en-US}</h4>
+        </div>
+        <div class="reviewer">${data.reviewer}</div>
+        <div class="stars">${generateStars(response.entries[0].fields.rating.en-US)}</div>
+        <div class="review-text">${response.entries[0].fields.description.en-US}</div>
+      `;
     });
+
+  function generateStars(rating) {
+      const fullStar = "★";
+      const emptyStar = "☆";
+      return fullStar.repeat(rating) + emptyStar.repeat(5 - rating);
+    }
 </script>
 
 <div class="review row">
