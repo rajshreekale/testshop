@@ -10779,12 +10779,14 @@ font-size: 28px !important;
 .countdown-overlay .countdown-timer span{
     display: block;
 }
-.sale-tagline{
-  font-size: 36px;
-  font-weoght: bold;
-  font-style: italic;
-  margin: 0;
-  color: #980065;
+.sale-tagline {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    color: #980065;
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px #fff;
 }
 .banner-image{
   height: 700px; 
