@@ -10777,3 +10777,7 @@ font-size: 28px !important;
 .countdown-overlay .countdown-timer span{
     display: block;
 }
+.sale-tagline{
+  font-size: 22px;
+  font-weoght: bold
+}
