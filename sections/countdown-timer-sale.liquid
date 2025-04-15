@@ -50,7 +50,8 @@
 }
 {% endschema %}
 
-<div class="countdown-container" style="background-image: url('{{ section.settings.image | image_url }}');">
+<div class="countdown-container">
+  <div style="background-image: url('{{ section.settings.image | image_url }}'); height: 600px; width: 600px;"></div>
   <div class="countdown-overlay">
     {% if section.settings.countdown_type == "before_sale" %}
       <p>{{ section.settings.custom_text }}</p>
