@@ -50,7 +50,7 @@
 }
 {% endschema %}
 
-<div class="countdown-container">
+<div id="countdown-wrapper" class="countdown-container">
   <div style="background-image: url('{{ section.settings.image | image_url }}');" class="banner-image"></div>
   <div class="countdown-overlay">
     {% if section.settings.countdown_type == "before_sale" %}
@@ -76,6 +76,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var countdownElement = document.getElementById("countdown");
+   var countdownWrapper = document.getElementById("countdown-wrapper");
     var countdownType = countdownElement.getAttribute("data-type");
     var startDate = new Date(countdownElement.getAttribute("data-start-date") + " 00:00:00").getTime();
     var endDate = new Date(countdownElement.getAttribute("data-end-date") + " 23:59:59").getTime();
@@ -119,6 +120,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+  // Auto-hide after 10 seconds
+    setTimeout(function () {
+        countdownWrapper.classList.add("fade-out");
+        setTimeout(() => {
+          countdownWrapper.style.display = "none";
+          clearInterval(interval);
+        }, 1000);
+    }, 10000);
+
+    // Manual close
+    closeButton.addEventListener("click", function () {
+        countdownWrapper.classList.add("fade-out");
+        setTimeout(() => {
+          countdownWrapper.style.display = "none";
+          clearInterval(interval);
+        }, 1000);
+    });
 });
 
 </script>
