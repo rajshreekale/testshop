@@ -143,25 +143,6 @@
         "padding_bottom": 52
       }
     },
-    "coupon_section_E8DQqk": {
-      "type": "coupon-section",
-      "settings": {
-        "coupon-hd-clr": "#000000",
-        "coupon-hd": "FLAT 15 % DISCOUNT",
-        "coupon-border-clr": "#06d9cf",
-        "coupon-border": "dashed",
-        "border-coupon-width": 2,
-        "coupon-bk-clr": "#15c5ff",
-        "coupon-txt-clr": "#ffffff",
-        "coupon-right": "15-PER-OFF",
-        "coupon-bk-tooltip-clr": "#a006d9",
-        "coupon-txt-tooltip-clr": "#ffffff",
-        "coupon-tooltip": "Copy to clipboard",
-        "coupon-bk-btn-clr": "#f3f1f1",
-        "coupon-txt-btn-clr": "#000000",
-        "coupon-txt": "Copy coupon"
-      }
-    },
     "collection_list_XNirDa": {
       "type": "collection-list",
       "blocks": {
@@ -200,6 +181,26 @@
         "swipe_on_mobile": false,
         "padding_top": 8,
         "padding_bottom": 24
+      }
+    },
+    "coupon_section_E8DQqk": {
+      "type": "coupon-section",
+      "custom_css": [],
+      "settings": {
+        "coupon-hd-clr": "#000000",
+        "coupon-hd": "FLAT 15 % DISCOUNT",
+        "coupon-border-clr": "#06d9cf",
+        "coupon-border": "dashed",
+        "border-coupon-width": 2,
+        "coupon-bk-clr": "#15c5ff",
+        "coupon-txt-clr": "#ffffff",
+        "coupon-right": "15-PER-OFF",
+        "coupon-bk-tooltip-clr": "#a006d9",
+        "coupon-txt-tooltip-clr": "#ffffff",
+        "coupon-tooltip": "Copy to clipboard",
+        "coupon-bk-btn-clr": "#f3f1f1",
+        "coupon-txt-btn-clr": "#000000",
+        "coupon-txt": "Copy coupon"
       }
     },
     "featured_collection": {
@@ -391,8 +392,8 @@
     "custom_liquid_kWgn3D",
     "slideshow_XThfjA",
     "custom_liquid_jkMGpd",
-    "coupon_section_E8DQqk",
     "collection_list_XNirDa",
+    "coupon_section_E8DQqk",
     "featured_collection",
     "countdown_timer_sale_98bRVf",
     "rich_text_FpMGxX",
