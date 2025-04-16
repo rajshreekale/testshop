@@ -10828,3 +10828,6 @@ font-size: 28px !important;
     width: 210px!important;
     height: 51px!important;
 }
+.header__inline-menu{
+  margin-top: -100px !important;
+}
