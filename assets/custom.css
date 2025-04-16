@@ -10720,6 +10720,7 @@ font-size: 28px !important;
   padding: 0 5rem;
   height: 271px;
   padding-top: 50px;
+  margin-bottom: 50px;
 }
 .coupon-row > div{
   width: calc(100% / 3);
