@@ -10779,6 +10779,7 @@ font-size: 28px !important;
     width: 400px;
     border-radius: 20px !important;
 }
+
 .countdown-overlay .countdown-timer span{
     display: block;
 }
@@ -10787,7 +10788,7 @@ font-size: 28px !important;
     font-weight: bold;
     font-style: italic;
     margin: 0;
-    color: #rgb(255 77 77);
+    color: #e54784;
     line-height: 1.5;
 }
 .banner-image{
@@ -10800,6 +10801,7 @@ font-size: 28px !important;
 .sale-starts-on{
   font-size: 18px;
   font-weight: bold;
+  color: #c3c3c3;
 }
 .sale-starts-on span{
     font-size: 22px;
@@ -10811,6 +10813,9 @@ font-size: 28px !important;
 .countdown-btn{
   background-color: #8f0070!important;
   color: #ffd600!important;
+}
+.countdown-timer {
+    color: #c3c3c3;
 }
 .countdown-timer span{
   font-size: 28px;
