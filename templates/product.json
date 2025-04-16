@@ -156,20 +156,12 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "image_with_countdown_dttLpF": {
-      "type": "image-with-countdown",
-      "settings": {
-        "image": "shopify://shop_images/black-bag-over-the-shoulder_925x_86692645-7662-411b-a250-57b7bd68f461.jpg",
-        "end_date": "2025-03-25"
-      }
     }
   },
   "order": [
     "main",
     "1711032538524d5d04",
     "related-products",
-    "17110324969798e207",
-    "image_with_countdown_dttLpF"
+    "17110324969798e207"
   ]
 }
