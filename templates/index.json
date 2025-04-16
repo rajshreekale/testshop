@@ -239,7 +239,7 @@
       "custom_css": [],
       "settings": {
         "countdown_type": "during_sale",
-        "image": "shopify://shop_images/sale.jpg",
+        "image": "shopify://shop_images/sale-blue.jpg",
         "start_date": "2025-04-15",
         "end_date": "2025-05-15",
         "custom_text": "Hurry up! Don't miss the sale!",
