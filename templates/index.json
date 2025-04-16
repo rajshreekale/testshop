@@ -134,6 +134,15 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "custom_liquid_jkMGpd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div>sdfds</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "coupon_section_E8DQqk": {
       "type": "coupon-section",
       "settings": {
@@ -151,15 +160,6 @@
         "coupon-bk-btn-clr": "#f3f1f1",
         "coupon-txt-btn-clr": "#000000",
         "coupon-txt": "Copy coupon"
-      }
-    },
-    "custom_liquid_jkMGpd": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div>sdfds</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "collection_list_XNirDa": {
@@ -390,8 +390,8 @@
   "order": [
     "custom_liquid_kWgn3D",
     "slideshow_XThfjA",
-    "coupon_section_E8DQqk",
     "custom_liquid_jkMGpd",
+    "coupon_section_E8DQqk",
     "collection_list_XNirDa",
     "featured_collection",
     "countdown_timer_sale_98bRVf",
