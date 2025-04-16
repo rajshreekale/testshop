@@ -10820,3 +10820,11 @@ font-size: 28px !important;
 .countdown-timer span{
   font-size: 28px;
 }
+.header__heading-logo-wrapper{
+  padding: 15px;
+  padding-top: 20px;
+}
+.header__heading-logo{
+    width: 210px!important;
+    height: 51px!important;
+}
