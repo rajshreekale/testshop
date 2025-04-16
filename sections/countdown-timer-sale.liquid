@@ -53,6 +53,7 @@
 <div id="countdown-wrapper" class="countdown-container">
   <div style="background-image: url('{{ section.settings.image | image_url }}');" class="banner-image"></div>
   <div class="countdown-overlay">
+     <button class="countdown-close" aria-label="Close Countdown">&times;</button>
     {% if section.settings.countdown_type == "before_sale" %}
       <p class="sale-tagline">{{ section.settings.custom_text }}</p>
       <p class="sale-starts-on"> Sale Starts on: <span> {{ section.settings.start_date }} </span></p>
