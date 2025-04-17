@@ -36,7 +36,7 @@
 }
 
 .collection-hero__title {
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 1rem;
 }
 
 .collection-hero__title + .collection-hero__description {
@@ -50,7 +50,7 @@
   .collection-hero__title + .collection-hero__description {
     font-size: 1.8rem;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .collection-hero__description {
