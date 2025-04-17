@@ -10870,3 +10870,6 @@ font-size: 28px !important;
 .single-product-detail-page .product__title h1{
   font-weight: bold;
 }
+.single-product-detail-page .price{
+  color: #c30000;
+}
