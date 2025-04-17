@@ -10862,3 +10862,6 @@ font-size: 28px !important;
 .collection-list .card-information>.price {
     color: rgb(195 0 0);
 }
+.single-product-detail-page{
+  max-width: 1440px;
+}
