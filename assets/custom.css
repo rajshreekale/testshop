@@ -10847,6 +10847,6 @@ font-size: 28px !important;
   row-gap: 20px;
 }
 .collection-list .grid--4-col-desktop .grid__item{
-width: calc(25% - 15px);
-    max-width: calc(25% - 15px);
+  width: calc(25% - 15px);
+  max-width: calc(25% - 15px);
 }
