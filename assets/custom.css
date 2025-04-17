@@ -10864,5 +10864,6 @@ font-size: 28px !important;
 }
 .single-product-detail-page{
   max-width: 1440px;
+  padding-top: 40px;
   margin: 0 auto;
 }
