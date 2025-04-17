@@ -8,6 +8,11 @@
   padding-bottom: 2rem;
 }
 
+.collection-hero-header{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 750px) {
   .collection-hero.collection-hero--with-image {
     padding: calc(4rem + var(--page-width-margin)) 0 calc(4rem + var(--page-width-margin));
@@ -23,10 +28,7 @@
   flex-basis: 100%;
 }
 
-.collection-hero-header{
-  max-width: 1400px;
-  margin: 0 auto;
-}
+
 
 @media screen and (min-width: 750px) {
   .collection-hero {
