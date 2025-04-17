@@ -10867,3 +10867,6 @@ font-size: 28px !important;
   padding-top: 40px;
   margin: 0 auto;
 }
+.single-product-detail-page .product__title h1{
+  font-weight: bold;
+}
