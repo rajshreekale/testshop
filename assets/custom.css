@@ -10839,3 +10839,6 @@ font-size: 28px !important;
 .product-collection-list{
   border: 1px solid #ccc;
 }
+.product-collection-list .card__information{
+  padding-bootm: 0;
+}
