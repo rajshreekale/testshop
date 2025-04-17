@@ -10838,6 +10838,8 @@ font-size: 28px !important;
 }
 .product-collection-list{
   border: 1px solid #ccc;
+  border-radius: 0 20px;
+      overflow: hidden;
 }
 .product-collection-list .card__information{
   padding-bootm: 0;
