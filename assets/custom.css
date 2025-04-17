@@ -10850,3 +10850,6 @@ font-size: 28px !important;
   width: calc(25% - 15px);
   max-width: calc(25% - 15px);
 }
+.collection-list aside{
+  margin-bottom: 25px;
+}
