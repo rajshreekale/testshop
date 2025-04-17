@@ -10831,3 +10831,8 @@ font-size: 28px !important;
 .header__inline-menu{
   margin-top: -100px !important;
 }
+
+.collection-list{
+  max-width: 1440px;
+  margin: 0 auto;
+}
