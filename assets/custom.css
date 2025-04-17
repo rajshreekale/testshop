@@ -10857,3 +10857,6 @@ font-size: 28px !important;
 .collection-list .card--card.card--media>.card__content {
     background-color: #f5f5f5 !important;
 }
+.collection-list .card-information>.price {
+    color: rgb(195 0 0);
+}
