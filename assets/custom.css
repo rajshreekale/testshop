@@ -10842,3 +10842,7 @@ font-size: 28px !important;
 .product-collection-list .card__information{
   padding-bootm: 0;
 }
+.collection-list .grid{
+  column-gap: 15px;
+  row-gap: 15px;
+}
