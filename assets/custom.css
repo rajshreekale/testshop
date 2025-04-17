@@ -10836,3 +10836,6 @@ font-size: 28px !important;
   max-width: 1440px;
   margin: 0 auto;
 }
+.product-collection-list{
+  border: 1px solid #ccc;
+}
