@@ -126,7 +126,8 @@
 
 .card__inner {
   width: 100%;
-  max-height: 180px; /*umesh*/
+  max-height: 425px;
+  min-height: 425px;
 }
 
 .card--media .card__inner .card__content {
