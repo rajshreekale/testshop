@@ -10888,6 +10888,7 @@ font-size: 28px !important;
 .wishlist-page .c-product img{
   max-height: 425px;
   min-height: 425px;
+  object-fit: contain;
 }
 .wishlist-page .js-wishlistBlock{
   column-gap: 20px;
