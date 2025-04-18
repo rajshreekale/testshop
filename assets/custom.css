@@ -10885,3 +10885,7 @@ font-size: 28px !important;
   font-weight: 600;
   padding-bottom: 1.5rem;
 }
+.wishlist-page .c-product img{
+  max-height: 425px;
+  min-height: 425px;
+}
