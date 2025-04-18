@@ -10894,7 +10894,7 @@ font-size: 28px !important;
   row-gap: 20px; 
 }
 .wishlist-page .js-wishlistBlock .wishlist-product__list{
-     border: 1px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 0 20px;
     overflow: hidden; 
 }
