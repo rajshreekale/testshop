@@ -10899,4 +10899,15 @@ font-size: 28px !important;
     border-radius: 0 20px;
     overflow: hidden; 
 }
+.wishlist-page .c-product .c-product__title h5{
+ font-size: 1.8rem;
+    font-weight: 600;
+  padding: 0 25px;
+}
+.wishlist-page .c-product p{
+  font-size: 1.6rem;
+  font-weight: 700;
+    padding: 0 25px;
+        color: #b12704;
+}
 
