@@ -10893,7 +10893,4 @@ font-size: 28px !important;
   column-gap: 20px;
   row-gap: 20px; 
 }
-.wishlist-page .js-wishlistBlock .wishlist-product__list{
-  width: calc(25% - 15px);
-  max-width: calc(25% - 15px);
-}
+
