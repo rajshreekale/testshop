@@ -10873,3 +10873,7 @@ font-size: 28px !important;
 .single-product-detail-page .price{
   color: #c30000;
 }
+.wishlist-page{
+    max-width: 1440px;
+  margin: 0 auto;
+}
