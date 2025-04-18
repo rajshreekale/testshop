@@ -10890,9 +10890,7 @@ font-size: 28px !important;
   height: auto;
   background: #fff;
 }
-.wishlist-page .c-product a a{
-    background: #ffffff00;
-}
+
 .wishlist-page .c-product img{
   max-height: 425px;
   min-height: 425px;
@@ -10912,6 +10910,9 @@ font-size: 28px !important;
   font-size: 1.8rem;
   font-weight: 600;
   padding: 0 25px;
+}
+.wishlist-page .c-product .c-product__title.h5 a{
+      background: #ffffff00;
 }
 .wishlist-page .c-product p{
   font-size: 1.6rem;
