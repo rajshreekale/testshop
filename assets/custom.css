@@ -10880,6 +10880,7 @@ font-size: 28px !important;
 .wishlist-page h2.title{
   font-size: calc(var(--font-heading-scale) * 4rem);
   border-bottom: 1px solid #ccc;
-  margin: 2.5rem 0 .5rem;
+  margin: 4.5rem 0 4.5rem;
   font-weight: 600;
+  padding-bottom: 1.5rem;
 }
