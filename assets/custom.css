@@ -10874,8 +10874,9 @@ font-size: 28px !important;
   color: #c30000;
 }
 .wishlist-page{
-    max-width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
+  padding-bottom: 7rem;
 }
 .wishlist-page h2.title{
   font-size: calc(var(--font-heading-scale) * 4rem);
