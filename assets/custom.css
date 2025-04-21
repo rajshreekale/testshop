@@ -10949,4 +10949,8 @@ font-size: 28px !important;
   font-size: 16px;
   min-width: 80px;
   color: #fff;
+  border: 0;
+  border-radius: 30px;
+  margin-left: 10px;
+  background: #cd0000;
 }
