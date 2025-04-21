@@ -52,32 +52,34 @@
     const emailInput = document.getElementById("newsletterEmail");
     const formMessage = document.getElementById("formMessage");
 
-   
-    // if (!localStorage.getItem("hideNewsletterPopup") && !sessionStorage.getItem("popupClosedThisSession")) {
+    // if (!localStorage.getItem("hideNewsletterPopup")) {
     //   setTimeout(() => {
     //     popup.style.display = "flex";
-    //   }, 1000);
+    //   }, 2000); // delay popup
     // }
+    /* Line no. 47 to 51 done just for testing purpose*/
+    setTimeout(() => {
+    if (popup) {
+      popup.style.display = "flex";
+    }
+  }, 1000);
 
-     setTimeout(() => {
-        popup.style.display = "flex";
-      }, 1000);
-  
-
-  
     closeBtn.addEventListener("click", () => {
-      closePopup();
+      popup.style.display = "none";
+      if (dontShow.checked) {
+        localStorage.setItem("hideNewsletterPopup", "true");
+      }
     });
-
-  
-    function isValidEmail(email) {
+     function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-
+    // Form submit handling
     form.addEventListener("submit", function (e) {
-      e.preventDefault();
+      e.preventDefault(); // prevent default submission
       const email = emailInput.value.trim();
+
+      // Clear previous message
       formMessage.textContent = "";
       formMessage.classList.remove("error", "success");
 
@@ -93,17 +95,12 @@
         return;
       }
 
-   
+      // Show success message
       formMessage.textContent = "Thank you for subscribing!";
       formMessage.classList.add("success");
 
-     
-
-     
-      setTimeout(() => {
-        closePopup();
-      }, 1500); 
+      // Optionally submit form to Shopify
+      //form.submit(); // Uncomment this if you want actual submission
     });
   });
 </script>
-
