@@ -62,14 +62,7 @@
      setTimeout(() => {
         popup.style.display = "flex";
       }, 1000);
-    function closePopup() {
-      popup.style.display = "none";
-      sessionStorage.setItem("popupClosedThisSession", "true");
-
-      if (dontShow.checked) {
-        localStorage.setItem("hideNewsletterPopup", "true");
-      }
-    }
+  
 
   
     closeBtn.addEventListener("click", () => {
