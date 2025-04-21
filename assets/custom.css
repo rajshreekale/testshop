@@ -10954,3 +10954,6 @@ font-size: 28px !important;
   margin-left: 10px;
   background: #cd0000;
 }
+.popup-wrapper .popup .popup-content > p{
+  padding: 0 5%;
+}
