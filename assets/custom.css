@@ -10942,4 +10942,10 @@ font-size: 28px !important;
   border-radius: 30px;
   border: 0;
 }
-
+.popup-wrapper .popup .popup-content .newsletter-form button{
+  padding: 10px;
+  height: 50px;
+  font-size: 16px;
+  min-width: 80px;
+  color: #fff;
+}
