@@ -10927,4 +10927,7 @@ font-size: 28px !important;
 .popup-wrapper .popup .popup-content h2 strong{
   font-size: 42px;
 }
+.popup-wrapper .popup .popup-content .newsletter-form{
+  display: flex;
+}
 
