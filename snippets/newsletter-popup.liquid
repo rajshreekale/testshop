@@ -53,13 +53,15 @@
     const formMessage = document.getElementById("formMessage");
 
    
-    if (!localStorage.getItem("hideNewsletterPopup") && !sessionStorage.getItem("popupClosedThisSession")) {
-      setTimeout(() => {
+    // if (!localStorage.getItem("hideNewsletterPopup") && !sessionStorage.getItem("popupClosedThisSession")) {
+    //   setTimeout(() => {
+    //     popup.style.display = "flex";
+    //   }, 1000);
+    // }
+
+     setTimeout(() => {
         popup.style.display = "flex";
       }, 1000);
-    }
-
-   
     function closePopup() {
       popup.style.display = "none";
       sessionStorage.setItem("popupClosedThisSession", "true");
