@@ -10923,6 +10923,7 @@ font-size: 28px !important;
 .popup-wrapper .popup{
   max-width: 600px;
   text-align: center;
+  padding: 2rem 0px;
 }
 
 .popup-wrapper .popup .popup-content h2{
