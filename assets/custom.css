@@ -10924,8 +10924,14 @@ font-size: 28px !important;
   max-width: 600px;
   text-align: center;
 }
+
+.popup-wrapper .popup .popup-content h2{
+  color: #e13838;
+}
+
 .popup-wrapper .popup .popup-content h2 strong{
   font-size: 42px;
+  color: #111111;
 }
 .popup-wrapper .popup .popup-content .newsletter-form{
   display: flex;
@@ -10957,6 +10963,7 @@ font-size: 28px !important;
 }
 .popup-wrapper .popup .popup-content > p{
   padding: 0 5%;
+  color: #575757;
 }
 .popup-wrapper .form-message.error {
   color: #ff7575;
