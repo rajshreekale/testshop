@@ -52,14 +52,14 @@
     const emailInput = document.getElementById("newsletterEmail");
     const formMessage = document.getElementById("formMessage");
 
-    // ✅ Show only if NOT hidden for session or permanently
+   
     if (!localStorage.getItem("hideNewsletterPopup") && !sessionStorage.getItem("popupClosedThisSession")) {
       setTimeout(() => {
         popup.style.display = "flex";
       }, 1000);
     }
 
-    // ✅ Common close logic
+   
     function closePopup() {
       popup.style.display = "none";
       sessionStorage.setItem("popupClosedThisSession", "true");
@@ -69,17 +69,17 @@
       }
     }
 
-    // ❌ Close button click
+  
     closeBtn.addEventListener("click", () => {
       closePopup();
     });
 
-    // ✅ Email validation
+  
     function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    // ✅ Form submit
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const email = emailInput.value.trim();
@@ -98,17 +98,16 @@
         return;
       }
 
-      // ✅ Show success message
+   
       formMessage.textContent = "Thank you for subscribing!";
       formMessage.classList.add("success");
 
-      // Optional: delay real submit if you want to show success
-      // setTimeout(() => form.submit(), 1500);
+     
 
-      // ✅ Hide popup for session (success submission)
+     
       setTimeout(() => {
         closePopup();
-      }, 1500); // give time for user to read the message
+      }, 1500); 
     });
   });
 </script>
