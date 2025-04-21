@@ -593,6 +593,8 @@ document.addEventListener('DOMContentLoaded', function () {
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    {% render 'newsletter-popup' %}
+    {% if template == 'index' %}
+  {% render 'newsletter-popup' %}
+{% endif %}
   </body>
 </html>
