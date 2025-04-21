@@ -8,7 +8,12 @@
         <input type="hidden" name="form_type" value="customer" />
         <input type="hidden" name="utf8" value="✓" />
         <input type="email" name="contact[email]" placeholder="Your email address" required>
+        <!-- <button type="submit">Sign Up</button> -->
+        <form id="newsletterForm" class="newsletter-form" novalidate>
+        <input type="email" id="newsletterEmail" name="contact[email]" placeholder="Your email address" required>
         <button type="submit">Sign Up</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
       </form>
       <label><input type="checkbox" id="dontShowAgain"> Don't show this popup again</label>
     </div>
@@ -37,6 +42,9 @@
     const popup = document.getElementById("newsletterPopup");
     const closeBtn = document.getElementById("closePopup");
     const dontShow = document.getElementById("dontShowAgain");
+    const form = document.getElementById("newsletterForm");
+    const emailInput = document.getElementById("newsletterEmail");
+    const formMessage = document.getElementById("formMessage");
 
     // if (!localStorage.getItem("hideNewsletterPopup")) {
     //   setTimeout(() => {
@@ -55,6 +63,38 @@
       if (dontShow.checked) {
         localStorage.setItem("hideNewsletterPopup", "true");
       }
+    });
+     function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Form submit handling
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // prevent default submission
+      const email = emailInput.value.trim();
+
+      // Clear previous message
+      formMessage.textContent = "";
+      formMessage.classList.remove("error", "success");
+
+      if (!email) {
+        formMessage.textContent = "Email is required.";
+        formMessage.classList.add("error");
+        return;
+      }
+
+      if (!isValidEmail(email)) {
+        formMessage.textContent = "Please enter a valid email address.";
+        formMessage.classList.add("error");
+        return;
+      }
+
+      // Show success message
+      formMessage.textContent = "Thank you for subscribing!";
+      formMessage.classList.add("success");
+
+      // Optionally submit form to Shopify
+      // form.submit(); // Uncomment this if you want actual submission
     });
   });
 </script>
