@@ -10920,4 +10920,7 @@ font-size: 28px !important;
   padding: 0 25px;
   color: #b12704;
 }
+.popup-wrapper{
+  max-width: 600px;
+}
 
