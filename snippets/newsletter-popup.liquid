@@ -52,34 +52,37 @@
     const emailInput = document.getElementById("newsletterEmail");
     const formMessage = document.getElementById("formMessage");
 
-    // if (!localStorage.getItem("hideNewsletterPopup")) {
-    //   setTimeout(() => {
-    //     popup.style.display = "flex";
-    //   }, 2000); // delay popup
-    // }
-    /* Line no. 47 to 51 done just for testing purpose*/
-    setTimeout(() => {
-    if (popup) {
-      popup.style.display = "flex";
+    // ✅ Show only if NOT hidden for session or permanently
+    if (!localStorage.getItem("hideNewsletterPopup") && !sessionStorage.getItem("popupClosedThisSession")) {
+      setTimeout(() => {
+        popup.style.display = "flex";
+      }, 1000);
     }
-  }, 1000);
 
-    closeBtn.addEventListener("click", () => {
+    // ✅ Common close logic
+    function closePopup() {
       popup.style.display = "none";
+      sessionStorage.setItem("popupClosedThisSession", "true");
+
       if (dontShow.checked) {
         localStorage.setItem("hideNewsletterPopup", "true");
       }
+    }
+
+    // ❌ Close button click
+    closeBtn.addEventListener("click", () => {
+      closePopup();
     });
-     function isValidEmail(email) {
+
+    // ✅ Email validation
+    function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    // Form submit handling
+    // ✅ Form submit
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); // prevent default submission
+      e.preventDefault();
       const email = emailInput.value.trim();
-
-      // Clear previous message
       formMessage.textContent = "";
       formMessage.classList.remove("error", "success");
 
@@ -95,12 +98,18 @@
         return;
       }
 
-      // Show success message
+      // ✅ Show success message
       formMessage.textContent = "Thank you for subscribing!";
       formMessage.classList.add("success");
 
-      // Optionally submit form to Shopify
-      //form.submit(); // Uncomment this if you want actual submission
+      // Optional: delay real submit if you want to show success
+      // setTimeout(() => form.submit(), 1500);
+
+      // ✅ Hide popup for session (success submission)
+      setTimeout(() => {
+        closePopup();
+      }, 1500); // give time for user to read the message
     });
   });
 </script>
+
