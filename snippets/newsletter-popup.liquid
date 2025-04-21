@@ -4,7 +4,13 @@
     <div class="popup-content">
       <h2>Join our newsletter and get<br><strong>20% off your first order</strong></h2>
       <p>Be the first to know about our new arrivals, exclusive offers and the latest fashion updates.</p>
-      <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="newsletter-form">
+       <form id="newsletterForm" method="post" action="/contact#contact_form" accept-charset="UTF-8" class="newsletter-form" novalidate>
+        <input type="hidden" name="form_type" value="customer" />
+        <input type="hidden" name="utf8" value="✓" />
+        <input type="email" id="newsletterEmail" name="contact[email]" placeholder="Your email address" required>
+        <button type="submit">Sign Up</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
         <input type="hidden" name="form_type" value="customer" />
         <input type="hidden" name="utf8" value="✓" />
         <!-- <input type="email" name="contact[email]" placeholder="Your email address" required> -->
