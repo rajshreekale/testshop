@@ -10924,4 +10924,8 @@ font-size: 28px !important;
   max-width: 600px;
   text-align: center;
 }
+.popup-wrapper .popup .popup-content h2 strong{
+  font-size: 42px;
+}
+font-size: 42px;
 
