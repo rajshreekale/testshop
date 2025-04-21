@@ -1,0 +1,54 @@
+<div id="newsletterPopup" class="popup-wrapper" style="display:none;">
+  <div class="popup">
+    <button id="closePopup" class="close">&times;</button>
+    <div class="popup-content">
+      <h2>Join our newsletter and get<br><strong>20% off your first order</strong></h2>
+      <p>Be the first to know about our new arrivals, exclusive offers and the latest fashion updates.</p>
+      <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="newsletter-form">
+        <input type="hidden" name="form_type" value="customer" />
+        <input type="hidden" name="utf8" value="✓" />
+        <input type="email" name="contact[email]" placeholder="Your email address" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <label><input type="checkbox" id="dontShowAgain"> Don't show this popup again</label>
+    </div>
+  </div>
+</div>
+
+<style>
+.popup-wrapper {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+}
+.popup {
+  background: #fff; padding: 2rem; border-radius: 10px;
+  width: 90%; max-width: 500px; position: relative;
+}
+.close {
+  position: absolute; top: 10px; right: 10px;
+  background: none; border: none; font-size: 24px;
+  cursor: pointer;
+}
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("newsletterPopup");
+    const closeBtn = document.getElementById("closePopup");
+    const dontShow = document.getElementById("dontShowAgain");
+
+    if (!localStorage.getItem("hideNewsletterPopup")) {
+      setTimeout(() => {
+        popup.style.display = "flex";
+      }, 2000); // delay popup
+    }
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+      if (dontShow.checked) {
+        localStorage.setItem("hideNewsletterPopup", "true");
+      }
+    });
+  });
+</script>
