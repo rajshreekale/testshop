@@ -10934,6 +10934,7 @@ font-size: 28px !important;
   background: #000;
   padding: 25px 15px;
   flex-direction: row;
+  margin-bottom: 15px;
 }
 .popup-wrapper .popup .popup-content .newsletter-form input{
   padding: 10px 15px;
