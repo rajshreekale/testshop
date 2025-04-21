@@ -38,11 +38,11 @@
     const closeBtn = document.getElementById("closePopup");
     const dontShow = document.getElementById("dontShowAgain");
 
-    if (!localStorage.getItem("hideNewsletterPopup")) {
-      setTimeout(() => {
-        popup.style.display = "flex";
-      }, 2000); // delay popup
-    }
+    // if (!localStorage.getItem("hideNewsletterPopup")) {
+    //   setTimeout(() => {
+    //     popup.style.display = "flex";
+    //   }, 2000); // delay popup
+    // }
 
     closeBtn.addEventListener("click", () => {
       popup.style.display = "none";
