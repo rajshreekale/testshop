@@ -10958,3 +10958,9 @@ font-size: 28px !important;
 .popup-wrapper .popup .popup-content > p{
   padding: 0 5%;
 }
+.form-message.error {
+  color: #ff7575;
+  position: absolute;
+  bottom: -14px;
+  font-size: 14px;
+}
