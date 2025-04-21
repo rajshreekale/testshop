@@ -10927,6 +10927,7 @@ font-size: 28px !important;
 
 .popup-wrapper .popup .popup-content h2{
   color: #e13838;
+  font-weight: bold;
 }
 
 .popup-wrapper .popup .popup-content h2 strong{
