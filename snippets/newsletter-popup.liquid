@@ -4,12 +4,13 @@
     <div class="popup-content">
       <h2>Join our newsletter and get<br><strong>20% off your first order</strong></h2>
       <p>Be the first to know about our new arrivals, exclusive offers and the latest fashion updates.</p>
-      <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="newsletter-form">
-        <input type="hidden" name="form_type" value="customer" />
-        <input type="hidden" name="utf8" value="✓" />
-        <input type="email" name="contact[email]" placeholder="Your email address" required>
-        <button type="submit">Sign Up</button>
-      </form>
+     <form id="newsletterForm" class="newsletter-form" novalidate>
+      <input type="hidden" name="form_type" value="customer" />
+      <input type="hidden" name="utf8" value="✓" />
+      <input type="email" id="newsletterEmail" name="contact[email]" placeholder="Your email address" required>
+      <button type="submit">Sign Up</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
       <label><input type="checkbox" id="dontShowAgain"> Don't show this popup again</label>
     </div>
   </div>
@@ -30,6 +31,16 @@
   background: none; border: none; font-size: 24px;
   cursor: pointer;
 }
+.form-message {
+   margin-top: 10px;
+  font-size: 0.9rem;
+ }
+.form-message.success {
+  color: green;
+ }
+.form-message.error {
+  color: red;
+}
 </style>
 
 <script>
@@ -37,6 +48,10 @@
     const popup = document.getElementById("newsletterPopup");
     const closeBtn = document.getElementById("closePopup");
     const dontShow = document.getElementById("dontShowAgain");
+
+     const form = document.getElementById("newsletterForm");
+    const emailInput = document.getElementById("newsletterEmail");
+    const formMessage = document.getElementById("formMessage");
 
     // if (!localStorage.getItem("hideNewsletterPopup")) {
     //   setTimeout(() => {
@@ -56,5 +71,32 @@
         localStorage.setItem("hideNewsletterPopup", "true");
       }
     });
+      function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Form submit behavior
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = emailInput.value.trim();
+      formMessage.textContent = "";
+      formMessage.classList.remove("error", "success");
+
+      if (!email) {
+        formMessage.textContent = "Email is required.";
+        formMessage.classList.add("error");
+        return;
+      }
+
+      if (!isValidEmail(email)) {
+        formMessage.textContent = "Please enter a valid email address.";
+        formMessage.classList.add("error");
+        return;
+      }
+
+      // Show success message
+      formMessage.textContent = "✅ Success! Thank you for subscribing.";
+      formMessage.classList.add("success");
   });
 </script>
