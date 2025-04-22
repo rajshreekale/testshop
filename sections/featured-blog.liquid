@@ -54,6 +54,11 @@
     ============{{ section.settings.blog.metafields.custom.contentful_blog_meta.value }}
     {% assign myfields = section.settings.blog.metafields.custom.contentful_blog_meta.value %}
     {{ myfields }}
+
+    {% for m in myfields.sizes %}  
+      ===1==={{m.value}} //nothing works
+      ===2==={{m[0].value}} //nothing works
+    {% endfor %}
     
     {% for blogContent in section.settings.blog.metaobjects.contentful_blog_meta.values %}
       ==={{ blogContent['121492963611'] }}
