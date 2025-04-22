@@ -10996,4 +10996,9 @@ font-size: 28px !important;
     width: 49%;
   }
 }
+@media screen and (max-width: 540px) {
+  .best-category-section{
+    padding: 0 1rem;
+  }
+}
 
