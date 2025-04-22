@@ -285,11 +285,10 @@
     },
     "featured_blog_PxHCXm": {
       "type": "featured-blog",
-      "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "heading": "Our Latest Blog",
         "heading_size": "h1",
-        "blog": "",
+        "blog": "fashion-blog",
         "post_limit": 3,
         "columns_desktop": 3,
         "color_scheme": "",
