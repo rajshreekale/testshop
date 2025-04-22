@@ -52,7 +52,7 @@
       </div>
     {%- endunless -%}
     ============{{ section.settings.blog.metafields.custom.contentful_blog_meta }}
-    {% for blogContent in section.settings.blog.metaobjects %}
+    {% for blogContent in section.settings.blog.metaobjects.contentful_blog_meta.values %}
       ==={{ blogContent['121492963611'] }}
     {% endfor %}
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
