@@ -53,7 +53,7 @@
     {%- endunless -%}
     ============{{ section.settings.blog.metafields.custom.contentful_blog_meta }}
     {% for blogContent in section.settings.blog.metafields.custom %}
-      ==={{ blogContent }}
+      ==={{ blogContent.custom.contentful_blog_meta['gid://shopify/Metaobject/121492963611'] }}
     {% endfor %}
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
