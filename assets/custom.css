@@ -10984,7 +10984,7 @@ font-size: 28px !important;
 }
 @media screen and (max-width: 1200px) {
   .best-category-section>div {
-    width: calc(100% / 3);
+    width: 33%;
   } 
 }
 
