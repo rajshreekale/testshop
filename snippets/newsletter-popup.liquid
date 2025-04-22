@@ -4,13 +4,14 @@
     <div class="popup-content">
       <h2>Join our newsletter and get<br><strong>20% off your first order</strong></h2>
       <p>Be the first to know about our new arrivals, exclusive offers and the latest fashion updates.</p>
-     <form id="newsletterForm" class="newsletter-form" novalidate>
+     <!-- <form id="newsletterForm" class="newsletter-form" novalidate>
       <input type="hidden" name="form_type" value="customer" />
       <input type="hidden" name="utf8" value="✓" />
       <input type="email" id="newsletterEmail" name="contact[email]" placeholder="Your email address" required>
       <button type="submit">Sign Up</button>
       <p id="formMessage" class="form-message"></p>
-    </form>
+    </form> -->
+      <p><strong>Offer expires in:</strong> <span id="countdownTimer" style="color: red; font-weight: bold;"></span></p>
       <label><input type="checkbox" id="dontShowAgain"> Don't show this popup again</label>
     </div>
   </div>
@@ -52,6 +53,29 @@
      const form = document.getElementById("newsletterForm");
     const emailInput = document.getElementById("newsletterEmail");
     const formMessage = document.getElementById("formMessage");
+    // Countdown Timer Logic
+const countdownElement = document.getElementById("countdownTimer");
+let countdownSeconds = 300; // 5 minutes
+
+function updateCountdown() {
+  const minutes = Math.floor(countdownSeconds / 60);
+  const seconds = countdownSeconds % 60;
+  countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  countdownSeconds--;
+
+  if (countdownSeconds < 0) {
+    countdownElement.textContent = "Offer expired";
+    clearInterval(countdownInterval);
+    // Optional: disable form submission here
+    form.querySelector("button[type='submit']").disabled = true;
+    formMessage.textContent = "⏰ Sorry! The offer has expired.";
+    formMessage.classList.add("error");
+  }
+}
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+updateCountdown(); // initial call
+
 
     // if (!localStorage.getItem("hideNewsletterPopup")) {
     //   setTimeout(() => {
