@@ -10983,8 +10983,12 @@ font-size: 28px !important;
   font-size: 38px;
 }
 @media screen and (max-width: 1200px) {
+  .best-category-section {
+    display: block;
+  } 
   .best-category-section>div {
     width: 33%;
+    display: inline-block;
   } 
 }
 
