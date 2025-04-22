@@ -11015,4 +11015,9 @@ font-size: 28px !important;
   .coupon-row {
     flex-direction: column;
   }
+  .coupon-card-add img {
+    width: auto;
+    max-height: 200px;
+    margin-left: auto;
+  }
 }
