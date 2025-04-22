@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = document.getElementById("closeCountdownPopup");
   const countdownElement = document.getElementById("countdownTimer");
 
-  // Optional: Adjust date/time below or inject via section settings
+ 
   const endDate = new Date("2025-05-15T23:59:00").getTime();
 
   function updateCountdown() {
@@ -68,8 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(() => {
     popup.style.display = "flex";
-  }, 1000); // Show popup after 1s
-
+  }, 1000); 
   closeBtn.addEventListener("click", () => {
     popup.style.display = "none";
   });
