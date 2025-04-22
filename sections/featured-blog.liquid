@@ -55,7 +55,7 @@
     {% assign myfields = section.settings.blog.metafields.custom.contentful_blog_meta.value %}
     {{ myfields }}
 
-    {% for m in myfields.title %}  
+    {% for m in myfields %}  
       ===1==={{m.value}} //nothing works
       ===2==={{m[0].value}} //nothing works
     {% endfor %}
