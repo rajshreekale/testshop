@@ -56,8 +56,7 @@
     {{ myfields }}
 
     {% for m in myfields %}  
-      ===1==={{m.value}} //nothing works
-      ===2==={{m[0].value}} //nothing works
+      ===1==={{m}}
     {% endfor %}
     
     {% for blogContent in section.settings.blog.metaobjects.contentful_blog_meta.values %}
