@@ -51,7 +51,7 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
-    ============{{ section.settings.blog.metafield.contentful_blog_meta['title'] }}
+    ============{{ section.settings.blog.metafields.custom }}
     {% for blogContent in section.settings.blog.metafields.custom.contentful_blog_meta %}
       ==={{ blogContent.title }}
     {% endfor %}
