@@ -11005,3 +11005,8 @@ font-size: 28px !important;
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .coupon-row>div{
+        width: 100%;
+  }
+}
