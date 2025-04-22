@@ -53,10 +53,6 @@
     {%- endunless -%}
     {% assign myfields = section.settings.blog.metafields.custom.contentful_blog_meta.value %}
 
-    {% for m in myfields %}  
-      {{m.title}}
-    {% endfor %}
-
     <div class="row">
       {% for m in myfields %}  
         <div class="col-4">
