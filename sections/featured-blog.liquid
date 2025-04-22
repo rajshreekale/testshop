@@ -51,7 +51,7 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
-    ============{{ section.settings.blog.metafields.custom.contentful_blog_meta }}
+    ============{{ section.settings.blog.metafields.custom.contentful_blog_meta.value }}
     {% for blogContent in section.settings.blog.metaobjects.contentful_blog_meta.values %}
       ==={{ blogContent['121492963611'] }}
     {% endfor %}
