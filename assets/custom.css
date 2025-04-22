@@ -10991,4 +10991,10 @@ font-size: 28px !important;
     display: inline-block;
   } 
 }
+@media screen and (max-width: 840px) {
+  .best-category-section>div {
+    width: 25%;
+    display: inline-block;
+  }
+}
 
