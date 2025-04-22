@@ -51,7 +51,7 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
-    ============{{ section.settings.blog.metafields.custom['contentful_blog_meta'] }}
+    ============{{ section.settings.blog.metafields.custom['contentful_blog_meta'][0].title }}
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
         id="Slider-{{ section.id }}"
