@@ -11025,6 +11025,10 @@ font-size: 28px !important;
   .popup-wrapper .popup .popup-content .newsletter-form button {
     font-size: 15px;
   }
+  .coupon-card-heading {
+    font-size: 22px;
+    line-height: 24px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
