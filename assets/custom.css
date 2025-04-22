@@ -11009,4 +11009,7 @@ font-size: 28px !important;
   .coupon-row>div{
         width: 100%;
   }
+  .coupon-row {
+    flex-direction: column;
+  }
 }
