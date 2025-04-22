@@ -3,11 +3,12 @@
     <button id="closeCountdownPopup" class="close">&times;</button>
     <div class="popup-content">
       <p><img src="https://cdn.shopify.com/s/files/1/0848/9916/8539/files/hurry-up_430x.png" height="" width=""></p>
+      <div id="countdownTimer" class="countdown-timer">Loading...</div>
       <div class="big-sale">🔥 Big Summer Sale is ON! 🔥</div>
       <div>Grab your favorites at up to 70% OFF – only while stocks last!</div>
       <div>☀️ Hot Deals | 🛍️ Cool Prices | ⏳ Limited Time Only</div>
       <div>Don’t miss out – shop now!</div>
-      <div id="countdownTimer" class="countdown-timer">Loading...</div>
+      
     </div>
   </div>
 </div>
@@ -16,6 +17,7 @@
   .big-sale{
     font-size: 36px;
     color: #000;
+    font-weight: 600;
   }
 .popup-wrapper {
   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
@@ -33,7 +35,7 @@
   margin-bottom: 1rem;
 }
 .countdown-timer {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #e53935;
 }
