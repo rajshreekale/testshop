@@ -1,0 +1,77 @@
+<div id="countdownPopup" class="popup-wrapper" style="display: none;">
+  <div class="popup">
+    <button id="closeCountdownPopup" class="close">&times;</button>
+    <div class="popup-content">
+      <h2>🔥 Hurry Up!!! Sale begins in:</h2>
+      <div id="countdownTimer" class="countdown-timer">Loading...</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.popup-wrapper {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+}
+.popup {
+  background: #fff; padding: 2rem; border-radius: 12px;
+  width: 90%; max-width: 400px; position: relative;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.popup h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.countdown-timer {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e53935;
+}
+.close {
+  position: absolute; top: 10px; right: 10px;
+  background: none; border: none; font-size: 24px;
+  cursor: pointer;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("countdownPopup");
+  const closeBtn = document.getElementById("closeCountdownPopup");
+  const countdownElement = document.getElementById("countdownTimer");
+
+  // Optional: Adjust date/time below or inject via section settings
+  const endDate = new Date("2025-04-23T23:59:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = endDate - now;
+
+    if (distance < 0) {
+      countdownElement.textContent = "🎉 Sale started!";
+      clearInterval(timerInterval);
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownElement.textContent = `${days}d ${hours}h ${mins}m ${secs}s`;
+  }
+
+  const timerInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  setTimeout(() => {
+    popup.style.display = "flex";
+  }, 1000); // Show popup after 1s
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+});
+</script>
