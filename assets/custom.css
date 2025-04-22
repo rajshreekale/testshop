@@ -11000,5 +11000,8 @@ font-size: 28px !important;
   .best-category-section{
     padding: 0 1rem;
   }
+  .popup-wrapper .popup .popup-content h2 strong {
+    font-size: 32px;
+  }
 }
 
