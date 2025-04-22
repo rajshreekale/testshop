@@ -289,7 +289,7 @@
         "heading": "Our Latest Blog",
         "heading_size": "h1",
         "blog": "fashion-blog",
-        "post_limit": 3,
+        "post_limit": 4,
         "columns_desktop": 3,
         "color_scheme": "",
         "show_image": true,
