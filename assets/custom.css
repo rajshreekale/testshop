@@ -10982,3 +10982,9 @@ font-size: 28px !important;
 .popup-wrapper .close{
   font-size: 38px;
 }
+@media screen and (max-width: 992px) {
+  .best-category-section>div {
+    width: calc(100% / 3);
+  } 
+}
+
