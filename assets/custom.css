@@ -11003,6 +11003,9 @@ font-size: 28px !important;
   .popup-wrapper .popup .popup-content h2 strong {
     font-size: 32px;
   }
+  .coupon-row {
+    padding: 1rem 1rem 0 1rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
