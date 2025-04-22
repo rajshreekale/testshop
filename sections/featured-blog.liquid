@@ -57,6 +57,14 @@
       {{m.title}}
     {% endfor %}
 
+    <div class="row">
+      {% for m in myfields %}  
+        <div class="col-4">
+          {{m.title}}
+        </div>
+      {% endfor %}
+    </div>
+
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
         id="Slider-{{ section.id }}"
