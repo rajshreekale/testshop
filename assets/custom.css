@@ -11012,6 +11012,19 @@ font-size: 28px !important;
   .coupon-section .h2{
     padding: 15px 0 5px;
   }
+  .popup-wrapper .popup .popup-content h2 {
+    font-size: 16px;
+  }
+  .popup-wrapper .popup .popup-content h2 strong {
+    font-size: 28px;
+  }
+  .popup-wrapper .popup .popup-content .newsletter-form input {
+    font-size: 15px;
+    min-width: 224px;
+  }
+  .popup-wrapper .popup .popup-content .newsletter-form button {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
