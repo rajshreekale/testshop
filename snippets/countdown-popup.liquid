@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
  
   const endDate = new Date("2025-05-15T23:59:00").getTime();
 
+   const now = new Date().getTime();
+  if (now >= endDate) return; //countdown visibility
+
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = endDate - now;
