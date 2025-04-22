@@ -10995,6 +10995,9 @@ font-size: 28px !important;
   .best-category-section>div {
     width: 49%;
   }
+  .banner-image{
+    display: none!important
+  }
 }
 @media screen and (max-width: 540px) {
   .best-category-section{
