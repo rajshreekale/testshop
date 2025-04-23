@@ -19,13 +19,9 @@
       console.log(response);
       const card = document.getElementById("blog-card-content");
       response.items.map((item) => {
-        
-      })
-      card.innerHTML = ``
+        card.innerHTML = `${item.title}`
+      });
     });
-    function myFunction(value, index, array) {
-      return value * 2;
-    }
 
 </script>
 
