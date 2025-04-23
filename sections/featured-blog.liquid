@@ -19,7 +19,7 @@
       console.log(response);
       const card = document.getElementById("blog-card-content");
       response.items.map((item) => {
-        card.innerHTML = `${item.fields.title}`
+        card.innerHTML.append(`${item.fields.title}`)
       });
     });
 
