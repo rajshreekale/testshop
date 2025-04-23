@@ -3,6 +3,17 @@
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 
+<script>
+    var client = contentful.createClient({
+      space: 'll66snvweeb7',
+      accessToken: 'mErSxsEkpOUs_56fRjR21_mwLSkEBtld2ue8arOImNo',
+    });
+    client.getEntries({ content_type: 'blogPage' }).then((response) => {
+      console.log(response);
+      const card = document.getElementById("review-card");
+    });
+</script>
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
