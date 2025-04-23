@@ -20,7 +20,33 @@
       const parentCard = document.getElementById("blog-card");
       const card = document.getElementById("blog-card-content");
       response.items.map((item) => {
-        card.innerHTML = card.innerHTML + `${item.fields.title}`;
+        card.innerHTML = card.innerHTML + `<div class="card article-card card--standard card--media col-4 mr-4">
+        <div class="card__inner">
+            <div class="article-card__image-wrapper">
+                <img class="card-image" src='${item.fields.image.fields.file.url}'>
+            </div>
+            <div class="card__content">
+                <div class="card__information">
+                    <h3 class="card__heading h2">
+                        ${item.fields.title}
+                    </h3>
+                    <p class="article-card__excerpt rte-width">
+                        ${item.fields.content}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card__content">
+            <div class="card__information">
+                <h3 class="card__heading h2">
+                    ${item.fields.title}
+                </h3>
+                <p class="article-card__excerpt rte-width">
+                    ${item.fields.content}
+                </p>
+            </div>
+        </div>
+    </div>`;
         
       });
     });
