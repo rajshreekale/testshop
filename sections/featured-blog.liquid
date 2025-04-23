@@ -17,9 +17,16 @@
     });
     client.getEntries({ content_type: 'blogPage' }).then((response) => {
       console.log(response);
-      const card = document.getElementById("blog-card");
+      const card = document.getElementById("blog-card-content");
+      response.items.map((item) => {
+        
+      })
       card.innerHTML = ``
     });
+    function myFunction(value, index, array) {
+      return value * 2;
+    }
+
 </script>
 
 {%- style -%}
