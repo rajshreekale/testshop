@@ -9,12 +9,12 @@
       const card = document.getElementById("review-card");
       card.innerHTML = `
         <div class="product-info">
-          <img src="${response.items[0].fields.productImage['en-US'].fields.file['en-US'].url}" alt="${response.items[0].fields.title[locale]}">
-          <h4>${response.items[0].fields.title[locale]}</h4>
+          <img src="${response.items[0].fields.productImage.fields.file.url}" alt="${response.items[0].fields.title}">
+          <h4>${response.items[0].fields.title}</h4>
         </div>
-        <div class="reviewer">${response.items[0].fields.authorName[locale]}</div>
-        <div class="stars">${generateStars(response.items[0].fields.rating['en-US'])}</div>
-        <div class="review-text">${response.items[0].fields.productDescription[locale]}</div>
+        <div class="reviewer">${response.items[0].fields.authorName}</div>
+        <div class="stars">${generateStars(response.items[0].fields.rating)}</div>
+        <div class="review-text">${response.items[0].fields.productDescription}</div>
       `;
     });
 
