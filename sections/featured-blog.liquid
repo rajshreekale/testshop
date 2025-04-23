@@ -20,7 +20,8 @@
       const parentCard = document.getElementById("blog-card");
       const card = document.getElementById("blog-card-content");
       response.items.map((item) => {
-        card.innerHTML = `${item.fields.title}`
+        card.innerHTML = `${item.fields.title}`;
+        parentCard.append(card);
       });
     });
 
