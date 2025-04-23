@@ -24,14 +24,25 @@
                       <div class="card__content">
                         <div class="card__information">
                           <h3 class="card__heading h2">
-                            ${response.items[0].fields.title}
+                            ${response.items[0].title}
                           </h3>
                           <p class="article-card__excerpt rte-width">
-                            ${response.items[0].fields.content}
+                            ${response.items[0].content}
                           </p>
                         </div>
                       </div>
+                    </div>
+                  <div class="card__content">
+                    <div class="card__information">
+                      <h3 class="card__heading h2">
+                        ${response.items[0].fields.title}
+                      </h3>
+                      <p class="article-card__excerpt rte-width">
+                        ${response.items[0].fields.content}
+                      </p>
+                    </div>
                   </div>
+                </div>
               </div>`
     });
 </script>
