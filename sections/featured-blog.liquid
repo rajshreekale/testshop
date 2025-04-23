@@ -18,62 +18,7 @@
     client.getEntries({ content_type: 'blogPage' }).then((response) => {
       console.log(response);
       const card = document.getElementById("blog-card");
-      card.innerHTML = `<div class="row">
-                <div class="card article-card card--standard card--media col-4 mr-4">
-                  <div class="card__inner">
-                    <div class="article-card__image-wrapper">
-                        <img class="card-image" src='${response.items[0].fields.image.fields.file.url}'>
-                      </div>
-                      <div class="card__content">
-                        <div class="card__information">
-                          <h3 class="card__heading h2">
-                            ${response.items[0].title}
-                          </h3>
-                          <p class="article-card__excerpt rte-width">
-                            ${response.items[0].content}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="card__content">
-                    <div class="card__information">
-                      <h3 class="card__heading h2">
-                        ${response.items[0].fields.title}
-                      </h3>
-                      <p class="article-card__excerpt rte-width">
-                        ${response.items[0].fields.content}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              <div class="card article-card card--standard card--media col-4">
-                    <div class="card__inner">
-                      <div class="article-card__image-wrapper">
-                        <img class="card-image" src='${response.items[1].fields.image.fields.file.url}'>
-                      </div>
-                      <div class="card__content">
-                        <div class="card__information">
-                          <h3 class="card__heading h2">
-                            ${response.items[1].fields.title}
-                          </h3>
-                          <p class="article-card__excerpt rte-width">
-                            ${response.items[1].fields.content}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="card__content">
-                    <div class="card__information">
-                      <h3 class="card__heading h2">
-                        ${response.items[1].fields.title}
-                      </h3>
-                      <p class="article-card__excerpt rte-width">
-                        ${response.items[1].fields.content}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>`
+      card.innerHTML = ``
     });
 </script>
 
@@ -127,6 +72,8 @@
     {%- endunless -%}
 
     <div id="blog-card">
+      <div class="row" id="blog-card-content">
+      </div>
     </div>
 
     {% comment %}
