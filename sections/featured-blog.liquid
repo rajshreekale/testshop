@@ -51,22 +51,6 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
-    {% assign myfields = section.settings.blog.metafields.custom.contentful_blog_meta.value %}
-
-    <div class="row">
-      {% for m in myfields %}  
-        <div class="col-4">
-          <div class="card" style="width: 25rem;">
-            <img src="{{ m.image }}" class="card-img-top" alt="{{ m.title }}">
-            <div class="card-body">
-              <h5 class="card-title">{{ m.title }}</h5>
-              <p class="card-text">===={{ m.content }}</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
 
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
