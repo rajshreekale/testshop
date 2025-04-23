@@ -11,10 +11,8 @@
     client.getEntries({ content_type: 'blogPage' }).then((response) => {
       console.log(response);
       const card = document.getElementById("blog-card");
-      card.innerHTML = `<div class="article-card-wrapper card-wrapper scroll-trigger animate--slide-in">
-                <div class="
-                    card article-card card--standard
-                     card--media" style="--ratio-percent: 30%;">
+      card.innerHTML = `<div class="row">
+                <div class="card article-card card--standard card--media col-4" style="--ratio-percent: 30%;">
                   <div class="card__inner color-background-2 gradient ratio" style="--ratio-percent: 30%;">
                     <div class="article-card__image-wrapper card__media">
                         <div class="article-card__image media">
@@ -46,7 +44,7 @@
               </div>
               <div class="
                     card article-card card--standard
-                     card--media" style="--ratio-percent: 30%;">
+                     card--media col-4" style="--ratio-percent: 30%;">
                   <div class="card__inner color-background-2 gradient ratio" style="--ratio-percent: 30%;">
                     <div class="article-card__image-wrapper card__media">
                         <div class="article-card__image media">
