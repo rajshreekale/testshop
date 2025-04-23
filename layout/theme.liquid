@@ -396,9 +396,10 @@
             productTitle: "{{ product.title }}",
             productImg: "{{ product.featured_image | img_url: '' }}",
             productPrice: "{{ product.price | money | remove_first: '' }}",
-            productUrl: "{{ product.url }},
+            productUrl: "{{ product.url }}",
             productVariantId: "{{ product.selected_or_first_available_variant.id }}",
             productVariantTitle: "{{ product.selected_or_first_available_variant.title }}"
+     
         };
 
         let wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
