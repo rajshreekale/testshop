@@ -3,7 +3,7 @@
       space: 'll66snvweeb7',
       accessToken: 'mErSxsEkpOUs_56fRjR21_mwLSkEBtld2ue8arOImNo',
     });
-    client.sync({   content_type: 'review' }).then((response) => {
+    client.getEntries({ content_type: 'review' }).then((response) => {
       console.log(response.entries);
       console.log(response.assets);
       const locale = document.getElementById('language').innerHTML;
