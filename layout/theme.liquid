@@ -35,7 +35,7 @@
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js" defer="defer"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
     {{ content_for_header }}
@@ -397,8 +397,7 @@
             productImg: "{{ product.featured_image | img_url: '' }}",
             productPrice: "{{ product.price | money | remove_first: '' }}",
             productUrl: "{{ product.url }}",
-            productVariantId: "{{ product.selected_or_first_available_variant.id }}",
-            productVariantTitle: "{{ product.selected_or_first_available_variant.title }}"
+            productVariantId: '{{ product.variants.first.id }}'
      
         };
 
@@ -461,9 +460,9 @@
                         <a class="full-unstyled-link" href="${item.productUrl}">${item.productTitle}</a>
                     </h3>
                     <p>${item.productPrice}</p>
-                    <form method="post" action="/cart/add">
+                    <form class="add-to-cart-form" data-title="${item.productTitle}">
                       <input type="hidden" name="id" value="${item.productVariantId}">
-                      <button type="submit">Add to Cart</button>
+                      <button type="submit" class="product-form__submit button button--full-width button--secondary">Add to Cart</button>
                     </form>
                     <button onclick="removeFromWishlist('${item.productTitle}')">Remove</button>
                 </div>

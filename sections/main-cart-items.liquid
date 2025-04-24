@@ -453,54 +453,125 @@
         <input type="checkbox" id="gift-wrap-checkbox" name="attributes[gift_wrap]" value="yes" {% if product_in_cart %}checked{% endif %}>
         <label for="gift-wrap-checkbox">Add Gift Wrap {%- if localization.country.iso_code != 'US' -%}  (+ {{ localization.country.currency.symbol }} 100.00) {% else %}(+{{ localization.country.currency.symbol }} 1.00){% endif %}</label>
       </div>
+    
+    <style>
+      #free-shipping-banner {
+        background: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
       
-     <script>
-   document.addEventListener("DOMContentLoaded", function() {
-        let checkbox = document.getElementById("gift-wrap-checkbox");
-        let giftWrapVariantId = "50053839028507"; // Replace with actual variant ID
-    
-        checkbox.addEventListener("change", function() {
-            let isChecked = checkbox.checked;
-    
-            if (isChecked) {
-                // Add Gift Wrap
-                fetch('/cart/add.js?id=50053839028507&quantity=1', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        id: giftWrapVariantId, 
-                        quantity: 1
-                    })
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        return response.json().then(err => { throw new Error(err.description); });
-                    }
-                    return response.json();
-                })
-                .then(data => location.reload()) // Refresh cart
-                .catch(error => console.error('Error:', error));
-            } else {
-                // Remove Gift Wrap
-                fetch('/cart/update.js', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        updates: { [giftWrapVariantId]: 0 }
-                    })
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        return response.json().then(err => { throw new Error(err.description); });
-                    }
-                    return response.json();
-                })
-                .then(data => location.reload()) // Refresh cart
-                .catch(error => console.error('Error:', error));
-            }
+      .hidden {
+        display: none;
+      }
+      
+    </style>
+    <div id="free-shipping-message-cart" class="cart-promo-message" style="text-align: center;color: green;font-weight: bold;"></div>
+
+  <script>
+
+    //start free shipping message script
+    function updateFreeShippingMessageCart()
+    {
+      
+      const FREE_SHIPPING_THRESHOLD = 500;
+      const SHOW_MESSAGE_MARGIN = 0.30; // 15%
+      const MIN_CART_FOR_MESSAGE = FREE_SHIPPING_THRESHOLD * (1 - SHOW_MESSAGE_MARGIN);
+      //const banner = document.querySelector('#free-shipping-banner');
+      fetch('/cart.js')
+        .then(res => res.json())
+        .then(cart => {
+          const subtotal = cart.total_price / 100; // convert cents to dollars
+          const remaining = FREE_SHIPPING_THRESHOLD - subtotal;
+          //alert(subtotal);
+          if (subtotal >= FREE_SHIPPING_THRESHOLD) {
+            document.querySelector('#free-shipping-message-cart').innerText =
+              `You’ve unlocked FREE shipping! 🎉`;
+              //banner.classList.remove('hidden');
+          } else if (subtotal >= MIN_CART_FOR_MESSAGE) {
+            document.querySelector('#free-shipping-message-cart').innerText =
+              `Add $${remaining.toFixed(2)} more to your cart to get FREE shipping! 🚚`;
+              //banner.classList.remove('hidden');
+          } else {
+            document.querySelector('#free-shipping-message-cart').innerText = ''; // hide message
+            //banner.classList.add('hidden');
+          }
         });
+    }
+
+    // Also call it when quantity buttons are clicked
+    document.addEventListener('click', function (e) {
+
+      //alert("here");
+      // Match buttons by common class names (adjust if needed for your theme)
+      if (
+        e.target.closest('.cart__qty-adjust') ||
+        e.target.closest('.quantity__button') || // for Dawn-like themes
+        e.target.closest('.plus') || 
+        e.target.closest('.minus')
+      ) {
+        //alert("condition pass");
+        // Wait a bit for cart to update, then recalculate
+        setTimeout(updateFreeShippingMessageCart, 1500);
+      }
     });
-</script>
+    // Call it on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateFreeShippingMessageCart();
+    });
+
+    // ends
+
+    document.addEventListener("DOMContentLoaded", function() {
+      let checkbox = document.getElementById("gift-wrap-checkbox");
+      let giftWrapVariantId = "50053839028507"; // Replace with actual variant ID
+  
+      checkbox.addEventListener("change", function() {
+          let isChecked = checkbox.checked;
+  
+          if (isChecked) {
+              // Add Gift Wrap
+              fetch('/cart/add.js?id=50053839028507&quantity=1', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                      id: giftWrapVariantId, 
+                      quantity: 1
+                  })
+              })
+              .then(response => {
+                  if (!response.ok) {
+                      return response.json().then(err => { throw new Error(err.description); });
+                  }
+                  return response.json();
+              })
+              .then(data => location.reload()) // Refresh cart
+              .catch(error => console.error('Error:', error));
+          } else {
+              // Remove Gift Wrap
+              fetch('/cart/update.js', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                      updates: { [giftWrapVariantId]: 0 }
+                  })
+              })
+              .then(response => {
+                  if (!response.ok) {
+                      return response.json().then(err => { throw new Error(err.description); });
+                  }
+                  return response.json();
+              })
+              .then(data => location.reload()) // Refresh cart
+              .catch(error => console.error('Error:', error));
+          }
+      });
+    });
+  </script>
 
      <!-- Gift Wrap Option : End -->
                               

@@ -38,3 +38,32 @@
   <!-- Wishlist items will be displayed here -->
 </div>
 
+<script>
+  document.addEventListener('submit', function (e) {
+    if (e.target.matches('.add-to-cart-form')) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const title = form.dataset.title;
+
+        fetch('/cart/add.js', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert(`${title} added to cart!`);
+            window.location.href = '/cart';
+            //window.location.reload();
+        })
+        .catch(err => {
+            console.error('Add to cart failed:', err);
+            alert('Failed to add to cart.');
+        });
+    }
+});
+
+</script>
