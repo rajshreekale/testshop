@@ -17,6 +17,16 @@
 </style>
 
 <script>
+    fetch('https://cdn.contentful.com/spaces/ll66snvweeb7/environments/master/entries?access_token=mErSxsEkpOUs_56fRjR21_mwLSkEBtld2ue8arOImNo&content_type=blogPage')
+    .then(response => response.json())
+    .then(data => {
+      console.log('Entries:', data.items);
+      data.items.forEach(item => {
+        document.body.innerHTML += `<p>${item.fields.title}</p>`;
+      });
+    })
+    .catch(console.error);
+  
     var client = contentful.createClient({
       space: 'll66snvweeb7',
       accessToken: 'mErSxsEkpOUs_56fRjR21_mwLSkEBtld2ue8arOImNo',
