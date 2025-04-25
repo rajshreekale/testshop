@@ -10932,16 +10932,17 @@ font-size: 28px !important;
 .wishlist-page .add-to-cart-form + button{
   display: block;
   width: 45px;
-  height: 45px;
+  height: 47px;
   padding: 5px;
   color: #065089;
   border: 1px solid #065089;
-  background: url('https://cdn.shopify.com/s/files/1/0848/9916/8539/files/trash-icon_430x.png') no-repeat;
+  background: #fff url(/cdn/shop/files/trash-icon_430x.png) no-repeat;
   position: absolute;
   bottom: 0;
   right: 15px;
   font-size: 0;
-  background-size: 45px;
+  background-size: 30px 34px;
+  background-position: center;
 }
 .wishlist-page .c-product{
   position: relative;
