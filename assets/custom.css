@@ -10717,6 +10717,10 @@ font-size: 28px !important;
     max-height: 425px!important;
     min-height: 425px!important;
 }
+.popular-product-collection .card__inner .price{
+    text-align: center;
+    color: #c30000;
+} 
 .coupon-row{
   display: flex;
   flex-direction: row;
