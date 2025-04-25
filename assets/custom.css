@@ -10910,6 +10910,7 @@ font-size: 28px !important;
   font-size: 1.8rem;
   font-weight: 600;
   padding: 0 25px;
+  min-height: 50px;
 }
 .wishlist-page .c-product .c-product__title.h5 a{
       background: #ffffff00;
