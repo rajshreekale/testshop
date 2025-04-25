@@ -10924,6 +10924,7 @@ font-size: 28px !important;
 .wishlist-page .product-form__submit{
   background: #065089;
   color:#fff;
+  width: calc(100% - 50px);
 }
 .wishlist-page .add-to-cart-form{
   padding: 0 15px;
@@ -10937,6 +10938,8 @@ font-size: 28px !important;
   border: 1px solid #065089;
   background: url('https://cdn.shopify.com/s/files/1/0848/9916/8539/files/trash-icon_430x.png') no-repeat;
   position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .wishlist-page .c-product{
   position: relative;
