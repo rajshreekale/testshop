@@ -10937,7 +10937,11 @@ font-size: 28px !important;
   border: 1px solid #065089;
   position: relative;
 }
-&#xF5DE;
+.wishlist-page .add-to-cart-form + button:before{
+  position: absolute;
+  content:'&#xF5DE;';
+}
+
 .popup-wrapper .popup{
   max-width: 600px;
   text-align: center;
