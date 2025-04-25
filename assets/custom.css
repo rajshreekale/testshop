@@ -10531,13 +10531,13 @@ Go Top CSS
 
 .facets-container .facets__heading{
     background: #cb3000;
-    color: #fff;
+    color: #fff!important;
     padding: 15px 25px;
     font-size: 16px;
     font-weight: bold;
 }
 .facets-container .product-count__text{
-    color: #fff;
+    color: #fff!important;
     font-weight: 600;
     background: #cb3000; 
     padding: 3px 7px;
