@@ -10943,6 +10943,7 @@ font-size: 28px !important;
   font-size: 0;
   background-size: 30px 34px;
   background-position: center;
+  transition-property: all;
 }
 .wishlist-page .add-to-cart-form + button:hover{
    border: 2px solid #065089;
