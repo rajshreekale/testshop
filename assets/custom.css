@@ -10939,7 +10939,7 @@ font-size: 28px !important;
   background: url('https://cdn.shopify.com/s/files/1/0848/9916/8539/files/trash-icon_430x.png') no-repeat;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 15px;
 }
 .wishlist-page .c-product{
   position: relative;
