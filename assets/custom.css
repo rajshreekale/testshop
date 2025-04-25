@@ -10932,6 +10932,7 @@ font-size: 28px !important;
   display: block;
   width: calc(100% - 30px);
   padding: 5px;
+  color: #065089;
   border: 1px solid #065089;
 }
 .popup-wrapper .popup{
