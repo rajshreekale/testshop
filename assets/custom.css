@@ -10717,7 +10717,7 @@ font-size: 28px !important;
     max-height: 425px!important;
     min-height: 425px!important;
 }
-.popular-product-collection .card__inner .price{
+.popular-product-collection .card-information .price{
     text-align: center!important;
     color: #c30000!important;
 } 
