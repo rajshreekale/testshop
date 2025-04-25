@@ -10920,6 +10920,10 @@ font-size: 28px !important;
   padding: 0 25px;
   color: #b12704;
 }
+.wishlist-page .product-form__submit{
+    background: #065089;
+  color:#fff;
+}
 .popup-wrapper .popup{
   max-width: 600px;
   text-align: center;
