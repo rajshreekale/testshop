@@ -10940,6 +10940,8 @@ font-size: 28px !important;
   position: absolute;
   bottom: 0;
   right: 15px;
+  font-size: 0;
+  background-size: 45px;
 }
 .wishlist-page .c-product{
   position: relative;
