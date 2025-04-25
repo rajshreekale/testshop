@@ -10928,7 +10928,11 @@ font-size: 28px !important;
   padding: 0 15px;
 }
 .wishlist-page .add-to-cart-form + button{
-  margin: 0 auto;
+  margin: 10px auto 0;
+  display: block;
+  width: calc(100% - 30px);
+  padding: 5px;
+  border: 1px solid #065089;
 }
 .popup-wrapper .popup{
   max-width: 600px;
