@@ -10721,6 +10721,9 @@ font-size: 28px !important;
     text-align: center!important;
     color: #c30000!important;
 } 
+.popular-product-collection .card--card.card--media>.card__content {
+    background-color: #f6f6f6 !important;
+}
 .coupon-row{
   display: flex;
   flex-direction: row;
