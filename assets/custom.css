@@ -10860,6 +10860,9 @@ font-size: 28px !important;
     background-color: #e1e1e1 !important;
     border-bottom: 1px solid #b6b6b6;
 }
+.collection-list .card--card.card--media>.card__content .full-unstyled-link{
+    font-size: 22px;
+}
 .collection-list .card-information>.price {
     color: rgb(195 0 0);
 }
