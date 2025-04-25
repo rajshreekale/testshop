@@ -10939,7 +10939,7 @@ font-size: 28px !important;
 }
 .wishlist-page .add-to-cart-form + button:before{
   position: absolute;
-  content:'&#xF5DE';
+  content:'\U+F5DE';
 }
 
 .popup-wrapper .popup{
