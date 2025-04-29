@@ -46,7 +46,7 @@
                       >
                         {{ childlink.title | escape }}
                       </a>
-                      {% assign collection = childlink.object %}
+                      {% comment %} {% assign collection = childlink.object %}
                       {% if collection.products_count > 0 %}
                       <div class="compare-item">
                         <a href="{{ collection.products[0].url }}">
@@ -73,7 +73,7 @@
                             </li>
                           {%- endfor -%}
                         </ul>
-                      {%- endif -%}
+                      {%- endif -%} {% endcomment %}
                     </li>
                   {%- endfor -%}
                 </ul>
