@@ -10889,6 +10889,11 @@ font-size: 28px !important;
 .single-product-detail-page .price{
   color: #c30000;
 }
+.single-product-detail-page .product__media-item{
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  padding: 10px;
+}
 .wishlist-page{
   max-width: 1440px;
   margin: 0 auto;
