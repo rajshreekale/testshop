@@ -11057,6 +11057,10 @@ font-size: 28px !important;
   bottom: 15px;
   left: calc(50% - 45px);
 }
+.about-this-product{
+  padding: 20px;
+  background: #f7f7f7;
+}
 .about-this-product h2{
   font-weight: 600;
 }
