@@ -11068,6 +11068,9 @@ font-size: 28px !important;
 .product .product__info-wrapper{
   padding-bottom: 35px!important;
 }
+.about-this-product td{
+  border: 1px solid #ccc;
+}
 @media screen and (max-width: 1200px) {
   .best-category-section {
     display: block;
