@@ -11060,6 +11060,7 @@ font-size: 28px !important;
 .about-this-product{
   padding: 20px;
   background: #f7f7f7;
+  border: 1px solid #e7e7e7;
 }
 .about-this-product h2{
   font-weight: 600;
