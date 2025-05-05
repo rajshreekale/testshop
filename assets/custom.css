@@ -11065,6 +11065,9 @@ font-size: 28px !important;
 .about-this-product h2{
   font-weight: 600;
 }
+.product .product__info-wrapper{
+  padding-bottom: 20px;
+}
 @media screen and (max-width: 1200px) {
   .best-category-section {
     display: block;
