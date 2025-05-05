@@ -11043,6 +11043,9 @@ font-size: 28px !important;
 .popup-wrapper .close{
   font-size: 38px;
 }
+.compare-section h1{
+  font-weight: bold;
+}
 .compare-section .compare-item{
   position: relative;
   padding-bottom: 50px;
