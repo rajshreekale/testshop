@@ -11070,6 +11070,7 @@ font-size: 28px !important;
 }
 .about-this-product td{
   border: 1px solid #ccc;
+  padding: 5px;
 }
 @media screen and (max-width: 1200px) {
   .best-category-section {
