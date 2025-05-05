@@ -11068,6 +11068,9 @@ font-size: 28px !important;
 .product .product__info-wrapper{
   padding-bottom: 35px!important;
 }
+.about-this-product th{
+  padding: 10px 0 15px 0;
+}
 .about-this-product td{
     padding: 10px 15px;
     border: 1px solid #dfdfdf;
