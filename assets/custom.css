@@ -11043,6 +11043,15 @@ font-size: 28px !important;
 .popup-wrapper .close{
   font-size: 38px;
 }
+.compare-section .compare-item{
+  position: relative;
+  padding-bottom: 50px;
+}
+.compare-section .compare-btn{
+  position: absolute;
+  bottom: 15px;
+  left: calc(50% - 45px);
+}
 @media screen and (max-width: 1200px) {
   .best-category-section {
     display: block;
