@@ -11080,6 +11080,10 @@ font-size: 28px !important;
 .jdgm-rev-widg.jdgm-rev-widg{
   background: #ededed!important;
 }
+.jdgm-rev-widg.jdgm-rev-widg .jdgm-rev-widg__title {
+    font-size: 24px;
+    font-weight: 600;
+}
 @media screen and (max-width: 1200px) {
   .best-category-section {
     display: block;
