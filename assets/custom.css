@@ -11080,6 +11080,7 @@ font-size: 28px !important;
 .jdgm-rev-widg.jdgm-rev-widg{
   background: #ededed!important;
   margin-top: 35px;
+  border: 1px solid #e7e7e7;
 }
 .jdgm-rev-widg.jdgm-rev-widg .jdgm-rev-widg__title {
     font-size: 24px;
