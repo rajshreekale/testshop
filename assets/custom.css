@@ -11077,6 +11077,9 @@ font-size: 28px !important;
     background: #fff;
     line-height: 1.3;
 }
+.jdgm-review-widge{
+  background: #ededed;
+}
 @media screen and (max-width: 1200px) {
   .best-category-section {
     display: block;
