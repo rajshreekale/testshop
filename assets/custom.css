@@ -11077,7 +11077,7 @@ font-size: 28px !important;
     background: #fff;
     line-height: 1.3;
 }
-.jdgm-review-widge{
+.jdgm-review-widge, .jdgm-rev-widg.jdgm-rev-widg{
   background: #ededed!important;
 }
 @media screen and (max-width: 1200px) {
