@@ -528,14 +528,14 @@
 
     document.addEventListener("DOMContentLoaded", function() {
       let checkbox = document.getElementById("gift-wrap-checkbox");
-      let giftWrapVariantId = "50053839028507"; // Replace with actual variant ID
+      let giftWrapVariantId = "9827016409371"; // Replace with actual variant ID
   
       checkbox.addEventListener("change", function() {
           let isChecked = checkbox.checked;
   
           if (isChecked) {
               // Add Gift Wrap
-              fetch('/cart/add.js?id=50053839028507&quantity=1', {
+              fetch('/cart/add.js?id=9827016409371&quantity=1', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({
