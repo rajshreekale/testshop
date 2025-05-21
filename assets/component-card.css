@@ -485,3 +485,7 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+.loreal {
+      height: 302px;
+}
