@@ -11,3 +11,27 @@
   <button onclick="calculateEMI()">Calculate EMI</button>
 
   <div id="result"></div>
+
+
+  <script>
+    function calculateEMI() {
+      const principal = parseFloat(document.getElementById("principal").value);
+      const annualRate = parseFloat(document.getElementById("rate").value);
+      const years = parseFloat(document.getElementById("tenure").value);
+
+      const monthlyRate = annualRate / 12 / 100;
+      const months = years * 12;
+
+      if (!principal || !annualRate || !years || principal <= 0 || annualRate <= 0 || years <= 0) {
+        document.getElementById("result").innerText = "Please enter valid input values.";
+        return;
+      }
+
+      const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) /
+                  (Math.pow(1 + monthlyRate, months) - 1);
+
+      const emiRounded = emi.toFixed(2);
+
+      document.getElementById("result").innerText = `Monthly EMI: ₹${emiRounded}`;
+    }
+  </script>
