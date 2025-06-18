@@ -12,3 +12,8 @@
       text-align: center;
       font-size: 1.2em;
     }
+
+.card {
+  margin: 20px;
+  padding: 15px;
+}
