@@ -1,0 +1,14 @@
+    h2 {
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    #result {
+      background-color: #e0ffe0;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2em;
+    }
