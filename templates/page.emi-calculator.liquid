@@ -1,19 +1,22 @@
 {{ 'emi-calculator.css' | asset_url | stylesheet_tag }}
 
-
-<h2>EMI Calculator</h2>
-  <label for="principal">Loan Amount (₹):</label>
-  <input type="number" id="principal" placeholder="e.g. 500000" />
-
-  <label for="rate">Annual Interest Rate (%):</label>
-  <input type="number" id="rate" placeholder="e.g. 7.5" step="0.01" />
-
-  <label for="tenure">Loan Tenure (years):</label>
-  <input type="number" id="tenure" placeholder="e.g. 5" />
-
-  <button onclick="calculateEMI()">Calculate EMI</button>
-
-  <div id="result"></div>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">EMI Calculator</h5>
+      <label for="principal">Loan Amount (₹):</label>
+      <input type="number" class="form-control" id="principal" placeholder="e.g. 500000" />
+    
+      <label for="rate">Annual Interest Rate (%):</label>
+      <input type="number" class="form-control" id="rate" placeholder="e.g. 7.5" step="0.01" />
+    
+      <label for="tenure">Loan Tenure (years):</label>
+      <input type="number" class="form-control" id="tenure" placeholder="e.g. 5" />
+    
+      <button onclick="calculateEMI()">Calculate EMI</button>
+    
+      <div id="result"></div>
+  </div>
+</div>  
 
   <script>
     function calculateEMI() {
