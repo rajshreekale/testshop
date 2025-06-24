@@ -48,6 +48,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
+       <div><a href="/pages/about-us">About Us</a></div>
       <div class="footer__content-top page-width">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
@@ -89,7 +90,6 @@
                     {%- if block.settings.menu != blank -%}
                       <ul class="footer-block__details-content list-unstyled">
                         {%- for link in block.settings.menu.links -%}
-                          <li><a href="/pages/about-us">About Us</a></li>
                           <li>
                             <a
                               href="{{ link.url }}"
